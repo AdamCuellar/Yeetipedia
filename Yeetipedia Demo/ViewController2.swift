@@ -1,44 +1,46 @@
 //
-//  ViewController_2.swift
+//  ViewController2.swift
 //  Yeetipedia Demo
 //
-//  Created by Adam T. Cuellar on 2/19/19.
+//  Created by Adam T. Cuellar on 3/6/19.
 //  Copyright © 2019 Adam T. Cuellar. All rights reserved.
 //
 
 import UIKit
 
-class ViewController_2: UIViewController {
+class ViewController2: UIViewController {
     
+    var sup = [[String:Any]]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        // Do any additional setup after loading the view.
     }
     
-    
-    @IBAction func execute(_ sender: Any)
-    {
+    @IBAction func goNext(_ sender: Any) {
         contentRequest() { (result, error) in
             if let result = result {
-                self.parseInfo(dict:result)
-                print(result)
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "segueIdentifier2", sender: nil)
+                }
             } else if let error = error {
                 print("error: \(error.localizedDescription)")
             }
         }
     }
     
-    func parseInfo(dict:[String:Any]) -> Void
-    {
-        print("Parse info: \(dict)")
-        for (key,value) in dict
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "segueIdentifier2"
         {
-            if key == "sections"
+            if let content = segue.destination as? ViewController3
             {
-                print("!!!!!!!!!!",value)
-                DispatchQueue.main.async { self.sectionTile.text = "Hello World" /* value as? String */ }
+
+                content.sup = self.sup
+
             }
-            
         }
     }
     
@@ -73,7 +75,7 @@ class ViewController_2: UIViewController {
                 completion(nil, error)
                 return
             }
-    
+            
             guard let data = data else {
                 completion(nil, NSError(domain: "dataNilError", code: -100001, userInfo: nil))
                 return
@@ -85,7 +87,14 @@ class ViewController_2: UIViewController {
                     completion(nil, NSError(domain: "invalidJSONTypeError", code: -100009, userInfo: nil))
                     return
                 }
+                
+                let sections = json["sections"] as? [[String:Any]]
                 // print(json)
+                
+                DispatchQueue.main.async {
+                    self.sup = sections!
+                }
+                
                 completion(json, nil)
             } catch let error {
                 print(error.localizedDescription)
@@ -95,16 +104,5 @@ class ViewController_2: UIViewController {
         
         task.resume()
     }
-    
-    @IBOutlet weak var sectionTile: UILabel!
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

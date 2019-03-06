@@ -32,7 +32,10 @@ class ViewController: UIViewController {
             //call postRequest with username and password parameters
             postRequest(username: user, password: pass) { (result, error) in
                 if let result = result {
-                    print("success: \(result)")
+                    print("Success: \(result)")
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "segueIdentifier", sender: nil)
+                    }
                 } else if let error = error {
                     print("error: \(error.localizedDescription)")
                 }
@@ -42,9 +45,7 @@ class ViewController: UIViewController {
         {
             print("Error");
         }
-        
-        performSegue(withIdentifier: "segueIdentifier", sender: nil)
-        
+
     }
     
 
