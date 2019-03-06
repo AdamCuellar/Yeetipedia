@@ -1,0 +1,6 @@
+framework module Pods_Yeetipedia_DemoUITests {
+  umbrella header "Pods-Yeetipedia DemoUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

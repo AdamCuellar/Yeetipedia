@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ViewController_2.swift
 //  Yeetipedia Demo
 //
 //  Created by Adam T. Cuellar on 2/19/19.
@@ -8,56 +8,44 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController_2: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        view.addBackground(imageName: "backgroundCities.jpg")
-        
-        let fieldColor = UIColor.black
-        username.layer.borderColor = fieldColor.cgColor
-        
-        password.layer.borderColor = fieldColor.cgColor
         
     }
     
-    @IBAction func logIn(_ sender: Any)
+    
+    @IBAction func execute(_ sender: Any)
     {
-        if(!(username.text == "" || password.text == ""))
-        {
-            let user : String = username.text!
-            let pass : String = password.text!
-            
-            //call postRequest with username and password parameters
-            postRequest(username: user, password: pass) { (result, error) in
-                if let result = result {
-                    print("success: \(result)")
-                } else if let error = error {
-                    print("error: \(error.localizedDescription)")
-                }
+        contentRequest() { (result, error) in
+            if let result = result {
+                self.parseInfo(dict:result)
+                print(result)
+            } else if let error = error {
+                print("error: \(error.localizedDescription)")
             }
         }
-        else
-        {
-            print("Error");
-        }
-        
-        performSegue(withIdentifier: "segueIdentifier", sender: nil)
-        
     }
     
-
-    @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var username: UITextField!
+    func parseInfo(dict:[String:Any]) -> Void
+    {
+        print("Parse info: \(dict)")
+        for (key,value) in dict
+        {
+            if key == "sections"
+            {
+                print("!!!!!!!!!!",value)
+                DispatchQueue.main.async { self.sectionTile.text = "Hello World" /* value as? String */ }
+            }
+            
+        }
+    }
     
-    func postRequest(username: String, password: String, completion: @escaping ([String: Any]?, Error?) -> Void) {
-        
-        //declare parameter as a dictionary which contains string as key and value combination.
-        let parameters = ["username": username, "password": password]
-        
+    func contentRequest(/* dict: inout [String:Any] ,*/ completion: @escaping ([String: Any]?, Error?) -> Void)
+    {
         //create the url with NSURL
-        let url = URL(string: "https://www.yeetdog.com/ContactProject/login.php")!
+        let url = URL(string: "https://www.yeetdog.com/Cory_Test_Folder/ResponseTest.php")!
         
         //create the session object
         let session = URLSession.shared
@@ -67,8 +55,8 @@ class ViewController: UIViewController {
         request.httpMethod = "POST" //set http method as POST
         
         do {
-            request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted) // pass dictionary to data object and set it as request body
-            print(try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted))
+            request.httpBody = try JSONSerialization.data(withJSONObject: [] , options: .prettyPrinted) // pass dictionary to data object and set it as request body
+            print(try JSONSerialization.data(withJSONObject: [] , options: .prettyPrinted))
         } catch let error {
             print(error.localizedDescription)
             completion(nil, error)
@@ -85,7 +73,7 @@ class ViewController: UIViewController {
                 completion(nil, error)
                 return
             }
-            
+    
             guard let data = data else {
                 completion(nil, NSError(domain: "dataNilError", code: -100001, userInfo: nil))
                 return
@@ -97,7 +85,7 @@ class ViewController: UIViewController {
                     completion(nil, NSError(domain: "invalidJSONTypeError", code: -100009, userInfo: nil))
                     return
                 }
-                print(json)
+                // print(json)
                 completion(json, nil)
             } catch let error {
                 print(error.localizedDescription)
@@ -107,5 +95,16 @@ class ViewController: UIViewController {
         
         task.resume()
     }
-}
+    
+    @IBOutlet weak var sectionTile: UILabel!
+    /*
+    // MARK: - Navigation
 
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
