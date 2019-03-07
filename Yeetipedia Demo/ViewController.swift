@@ -12,24 +12,28 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // set background
         view.addBackground(imageName: "backgroundCities.jpg")
         
+        // add colored border to username and password text fields
         let fieldColor = UIColor.black
         username.layer.borderColor = fieldColor.cgColor
-        
         password.layer.borderColor = fieldColor.cgColor
         
     }
     
+    // attempt log in
     @IBAction func logIn(_ sender: Any)
     {
+        // make sure both username and password fields are not empty
+        // ADD: check if its a successful log in, if it isn't add a popup that says so
         if(!(username.text == "" || password.text == ""))
         {
             let user : String = username.text!
             let pass : String = password.text!
             
-            //call postRequest with username and password parameters
+            // call postRequest with username and password parameters
             postRequest(username: user, password: pass) { (result, error) in
                 if let result = result {
                     print("Success: \(result)")

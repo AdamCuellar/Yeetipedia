@@ -10,18 +10,21 @@ import UIKit
 
 class ViewController2: UIViewController {
     
-    var sup = [[String:Any]]()
+    
+        var pageInfo = [[String:Any]]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-    @IBAction func goNext(_ sender: Any) {
+    @IBAction func goNext(_ sender: Any)
+    {
+        // request content
         contentRequest() { (result, error) in
-            if let result = result {
-                DispatchQueue.main.async {
+            if let result = result
+            {
+                DispatchQueue.main.async
+                {
                     self.performSegue(withIdentifier: "segueIdentifier2", sender: nil)
                 }
             } else if let error = error {
@@ -30,20 +33,19 @@ class ViewController2: UIViewController {
         }
     }
     
+    // Get the new view controller using segue.destination.
+    // Pass the selected object to the new view controller.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
         if segue.identifier == "segueIdentifier2"
         {
             if let content = segue.destination as? ViewController3
             {
-
-                content.sup = self.sup
-
+                content.pageInfo = self.pageInfo
             }
         }
     }
     
+    // request content of desired page
     func contentRequest(/* dict: inout [String:Any] ,*/ completion: @escaping ([String: Any]?, Error?) -> Void)
     {
         //create the url with NSURL
@@ -92,7 +94,7 @@ class ViewController2: UIViewController {
                 // print(json)
                 
                 DispatchQueue.main.async {
-                    self.sup = sections!
+                    self.pageInfo = sections!
                 }
                 
                 completion(json, nil)

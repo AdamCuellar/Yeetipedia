@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController3: UIViewController {
 
-    var sup = [[String:Any]]()
+    var pageInfo = [[String:Any]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,15 +23,10 @@ class ViewController3: UIViewController {
             }
         } */
         
-        parseInfo(array: sup)
+        parseInfo(array: pageInfo)
     }
     
-    
-    @IBAction func execute(_ sender: Any)
-    {
-        
-    }
-    
+    // change UI based on pageInfo passed
     func parseInfo(array : [[String:Any]]) -> Void
     {
         print(array)
@@ -88,14 +83,16 @@ class ViewController3: UIViewController {
                     return
                 }
                 
+                // get sections from JSON
                 let sections = json["sections"] as? [[String:Any]]
+                
                 // print(json)
                 
-                DispatchQueue.main.async {
-                    self.sup = sections!
-                    self.parseInfo(array: self.sup)
+                DispatchQueue.main.async
+                {
+                    self.pageInfo = sections!
+                    self.parseInfo(array: self.pageInfo)
                 }
-                
                 completion(json, nil)
             } catch let error {
                 print(error.localizedDescription)
