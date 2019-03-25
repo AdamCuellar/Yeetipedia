@@ -38,9 +38,10 @@ class ViewController2: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueIdentifier2"
         {
-            if let content = segue.destination as? ViewController3
+            if let content = segue.destination as? TableViewController
             {
                 content.pageInfo = self.pageInfo
+                content.numSections = self.pageInfo.count
             }
         }
     }
