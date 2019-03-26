@@ -111,14 +111,14 @@
                         <viewLayoutGuide key="safeArea" id="biR-Cm-GC5"/>
                     </view>
                     <connections>
-                        <segue destination="k0u-fq-tTU" kind="presentation" identifier="segueIdentifier2" id="qql-yH-CBB"/>
+                        <segue destination="mjk-eg-giU" kind="presentation" identifier="segueIdentifier2" id="qql-yH-CBB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eUG-ba-5JG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="705.79710144927537" y="138.61607142857142"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Yeetipedia-->
         <scene sceneID="XVA-qO-Xmz">
             <objects>
                 <tableViewController id="k0u-fq-tTU" customClass="TableViewController" customModule="Yeetipedia_Demo" customModuleProvider="target" sceneMemberID="viewController">
@@ -149,13 +149,15 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="8Y4-Q5-TtV" firstAttribute="leading" secondItem="QAH-ZU-2if" secondAttribute="leadingMargin" id="2SH-E2-Kax"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="8Y4-Q5-TtV" secondAttribute="bottom" constant="208" id="8Qz-9d-Ugf"/>
+                                        <constraint firstAttribute="trailing" secondItem="KI8-z1-TMv" secondAttribute="trailing" constant="20" id="8ju-E8-dcB"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="KI8-z1-TMv" secondAttribute="bottom" constant="0.5" id="9ZJ-LQ-jNK"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="8Y4-Q5-TtV" secondAttribute="trailing" constant="69" id="BP8-0v-Gco"/>
-                                        <constraint firstItem="8Y4-Q5-TtV" firstAttribute="top" secondItem="QAH-ZU-2if" secondAttribute="topMargin" id="ECU-3T-vtF"/>
+                                        <constraint firstItem="KI8-z1-TMv" firstAttribute="top" secondItem="8Y4-Q5-TtV" secondAttribute="bottom" constant="5" id="AfC-8T-Nd7"/>
+                                        <constraint firstAttribute="bottom" secondItem="KI8-z1-TMv" secondAttribute="bottom" constant="11" id="Ajw-hQ-vZj"/>
                                         <constraint firstItem="KI8-z1-TMv" firstAttribute="trailing" secondItem="QAH-ZU-2if" secondAttribute="trailingMargin" id="HPW-7d-QtA"/>
-                                        <constraint firstItem="KI8-z1-TMv" firstAttribute="top" secondItem="8Y4-Q5-TtV" secondAttribute="bottom" constant="5" id="aLy-bs-ZaJ"/>
+                                        <constraint firstItem="8Y4-Q5-TtV" firstAttribute="top" secondItem="QAH-ZU-2if" secondAttribute="top" constant="11" id="LWN-4o-pJQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="8Y4-Q5-TtV" secondAttribute="trailing" constant="89" id="SbS-9u-h2H"/>
+                                        <constraint firstItem="8Y4-Q5-TtV" firstAttribute="leading" secondItem="QAH-ZU-2if" secondAttribute="leading" constant="20" id="Zpk-FZ-30G"/>
+                                        <constraint firstItem="KI8-z1-TMv" firstAttribute="leading" secondItem="QAH-ZU-2if" secondAttribute="leading" constant="20" id="bEl-89-PMv"/>
                                         <constraint firstItem="KI8-z1-TMv" firstAttribute="leading" secondItem="QAH-ZU-2if" secondAttribute="leadingMargin" id="ueo-2g-ZD2"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -170,10 +172,11 @@
                             <outlet property="delegate" destination="k0u-fq-tTU" id="8R9-6b-lWz"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Yeetipedia" id="NIt-Xu-1wG"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvw-4Y-XBv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1507.2463768115942" y="142.63392857142856"/>
+            <point key="canvasLocation" x="2417.3913043478265" y="142.63392857142856"/>
         </scene>
         <!--View Controller3-->
         <scene sceneID="kqf-Lh-Uh1">
@@ -209,6 +212,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqX-rv-438" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="704" y="853"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xxa-5c-7dw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mjk-eg-giU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qUc-pP-SW0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="k0u-fq-tTU" kind="relationship" relationship="rootViewController" id="K9H-4W-f7a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NZU-tU-2AT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1507.2463768115942" y="142.63392857142856"/>
         </scene>
     </scenes>
 </document>

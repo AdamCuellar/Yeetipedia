@@ -20,7 +20,7 @@ class TableViewController: UITableViewController {
         
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44
-        
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableView.reloadData()
 
         // Uncomment the following line to preserve selection between presentations
