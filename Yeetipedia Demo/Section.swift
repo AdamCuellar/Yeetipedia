@@ -12,12 +12,12 @@ class Section
 {
     var info: [String:Any]
     var title: String
-    var text: String
+    var author: String
     
     init(info: [String:Any])
     {
         self.info = info
-        self.title = (info["section_title"] as? String)!
-        self.text = (info["section_text"] as? String)!
+        self.title = (info["page_title"] as? String)!
+        self.author = (info["page_author"] as? String)!
     }
 }

@@ -8,20 +8,65 @@
 
 import UIKit
 
-class ViewController2: UIViewController {
+class ViewController2: UITableViewController {
     
+    // double array from json in table of contents
+    var table_of_contents_info = [[String:Any]]()
+    var table_of_contents_num_sections = Int()
     
-        var pageInfo = [[String:Any]]()
-
+    var testing = [String]()
+    
+    // double array for json loaded for page that will be selected
+    var pageInfo = [[String:Any]]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //testing=[["Hello", "World"],["What's","Up"]];
+        testing=["Hello","World","What's","Up"]
+        
+        tableView.contentInset = UIEdgeInsets(top: 20.0, left: 0.0, bottom: 0.0, right: 0.0)
+        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 44
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        tableView.reloadData()
+
     }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return table_of_contents_num_sections
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PagesCell", for: indexPath)
+        
+        print("CELLFORROWAT: \(indexPath.row)")
+//        let cellContent = testing[indexPath.row];
+//        cell.textLabel?.text = cellContent
+//        let pages = Pages(info: table_of_contents_info[indexPath.row])
+//
+//        cell.page = pages
+//        cell.selectionStyle = .none
+        
+        
+        return cell
+
+    }
+    
     
     @IBAction func goNext(_ sender: Any)
     {
         // request content
         contentRequest() { (result, error) in
-            if let result = result
+            if result != nil
             {
                 DispatchQueue.main.async
                 {
