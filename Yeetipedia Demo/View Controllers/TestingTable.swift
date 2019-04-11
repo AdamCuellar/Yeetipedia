@@ -9,8 +9,9 @@
 import UIKit
 
 struct CellInfo {
+    let id: Int
     let title: String
-    let author: String
+    let description: String
 }
 
 class CustomTocCell: UITableViewCell {
@@ -52,7 +53,7 @@ class TestingTable: UITableViewController {
         let cellInfo = cellInfoArray[indexPath.row]
         
         cell.title.text = cellInfo.title
-        cell.author.text = cellInfo.author
+        cell.author.text = cellInfo.description
     
         return cell
     }
@@ -63,7 +64,17 @@ class TestingTable: UITableViewController {
         
         
     }
-
+/*
+     format of the incoming json:
+     
+     "pages":
+        [
+     [{"id": 1}, {"title":"test"}, {"description":"This test content has been edited via EditTestSections.php"}],
+     [{"id": 2}, {"title":"abc"}, {}],
+     [{"id": 3}, {"title":"Proposal for a perpetual motion machine"}, {}]
+        ]
+     String : [[String : Any]]
+*/
 
 
 }

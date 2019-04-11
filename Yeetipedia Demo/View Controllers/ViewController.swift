@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var table_of_contents_info = [[String:Any]]()
+    var table_of_contents_info = [[[String:Any]]]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -131,7 +131,7 @@ class ViewController: UIViewController {
     func table_of_contents_request(/* dict: inout [String:Any] ,*/ completion: @escaping ([String: Any]?, Error?) -> Void)
     {
         //create the url with NSURL
-        let url = URL(string: "https://www.yeetdog.com/Cory_Test_Folder/Test_ToC_Response.php")!
+        let url = URL(string: "https://www.yeetdog.com/Yeetipedia/query_pages.php")! //Cory_Test_Folder/Test_ToC_Response.php")!
         
         //create the session object
         let session = URLSession.shared
@@ -174,8 +174,8 @@ class ViewController: UIViewController {
                 }
                 
                 // parses out the json to the arrays inside of the "pages" index
-                let pages = json["pages"] as? [[String:Any]]
-//                print("PRINTING JSON \(json)")
+                let pages = json["pages"] as? [[[String:Any]]]
+                print("PRINTING JSON \(json)")
                 print("pages:\n \(String(describing: pages))")
                 
                 DispatchQueue.main.async {
@@ -196,14 +196,6 @@ class ViewController: UIViewController {
     // Get the new view controller using segue.destination.
     // Pass the selected object to the new view controller.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "go_to_table_of_contents"
-        {
-            if let content = segue.destination as? ViewController2
-            {
-                content.table_of_contents_info = self.table_of_contents_info
-                content.table_of_contents_num_sections = self.table_of_contents_info.count
-            }
-        }
         if segue.identifier == "go_to_toc" {
             print("HELLO")
             if let navigationVC = segue.destination as? UINavigationController, let myViewController = navigationVC.topViewController as? TestingTable {
@@ -218,12 +210,48 @@ class ViewController: UIViewController {
         var cellInfoArray = [CellInfo]();
         
         for i in 0..<table_of_contents_info.count {
-            let cellInfo = CellInfo(title: table_of_contents_info[i]["page_title"] as! String, author: table_of_contents_info[i]["page_author"] as! String)
-            print("title: \(cellInfo.title), \(cellInfo.author)\n\n")
-            cellInfoArray.append(cellInfo)
+            //let cellInfo = CellInfo(title: table_of_contents_info[0][0][1], author: "Steve");
+            let cellInfo = CellInfo(id: table_of_contents_info[i][0]["id"] as? Int ?? -1, title: table_of_contents_info[i][1]["title"] as? String ?? "", description: table_of_contents_info[i][2]["description"] as? String ?? "")
+            print("\(String(describing: table_of_contents_info[i][0]["id"]))")
+           cellInfoArray.append(cellInfo)
+//            let cellInfo = CellInfo(title: table_of_contents_info[i]["page_title"] as! String, author: table_of_contents_info[i]["page_author"] as! String)
+//            print("title: \(cellInfo.title), \(cellInfo.author)\n\n")
+//            cellInfoArray.append(cellInfo)
         }
         
         return cellInfoArray
     }
 }
-
+/*
+ ["pages": <__NSArrayM 0x6000034d0b70>(
+ <__NSArrayM 0x6000034d1950>(
+    {id = 1;},
+    {title = test;},
+    {description = "This test content, has been edited via EditTestSections.php";}
+ ),
+ <__NSArrayM 0x6000034d2460>(
+    {id = 2;},
+    {title = abc;},
+    {}
+ )
+ )]
+ 
+ ["pages": <__NSArrayM 0x6000025ef6c0>(
+ {
+    index = 1;
+    "page_author" = "Robert Sherlock Holmes";
+    "page_title" = "Robohands are GARBAGE";
+ },
+ {
+    index = 2;
+    "page_author" = "Will B. Buttlicker";
+    "page_title" = "Dogs make great robots";
+ },
+ {
+    index = 3;
+    "page_author" = "Samuel L. Jackson";
+    "page_title" = "Where to put your super suit";
+ }
+ )
+ , "page_title": Table of Contents, "page_information": This is a list of the pages available]
+ */
