@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var table_of_contents_info = [[[String:Any]]]()
+    var table_of_contents_info = [[String:Any]]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -174,7 +174,7 @@ class ViewController: UIViewController {
                 }
                 
                 // parses out the json to the arrays inside of the "pages" index
-                let pages = json["pages"] as? [[[String:Any]]]
+                let pages = json["pages"] as? [[String:Any]]
                 print("PRINTING JSON \(json)")
                 print("pages:\n \(String(describing: pages))")
                 
@@ -211,12 +211,9 @@ class ViewController: UIViewController {
         
         for i in 0..<table_of_contents_info.count {
             //let cellInfo = CellInfo(title: table_of_contents_info[0][0][1], author: "Steve");
-            let cellInfo = CellInfo(id: table_of_contents_info[i][0]["id"] as? Int ?? -1, title: table_of_contents_info[i][1]["title"] as? String ?? "", description: table_of_contents_info[i][2]["description"] as? String ?? "")
-            print("\(String(describing: table_of_contents_info[i][0]["id"]))")
+            let cellInfo = CellInfo(id: table_of_contents_info[i]["id"] as? Int ?? -1, title: table_of_contents_info[i]["title"] as? String ?? "", description: table_of_contents_info[i]["description"] as? String ?? "")
+            print("\(String(describing: table_of_contents_info[i]["title"]))")
            cellInfoArray.append(cellInfo)
-//            let cellInfo = CellInfo(title: table_of_contents_info[i]["page_title"] as! String, author: table_of_contents_info[i]["page_author"] as! String)
-//            print("title: \(cellInfo.title), \(cellInfo.author)\n\n")
-//            cellInfoArray.append(cellInfo)
         }
         
         return cellInfoArray

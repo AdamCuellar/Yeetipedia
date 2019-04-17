@@ -34,10 +34,10 @@ class SectionsCell: UITableViewCell {
     
     func updateUI()
     {
-        content?.text = section?.info["section_text"] as? String
-        title?.text = section?.info["section_title"] as? String
+        content?.text = section?.info["content"] as? String
+        title?.text = section?.info["heading"] as? String
         
-        print(section?.info["section_text"] ?? "no")
+        print(section?.info["content"] ?? "no")
     }
     
     

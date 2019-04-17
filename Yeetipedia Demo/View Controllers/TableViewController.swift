@@ -22,6 +22,9 @@ class TableViewController: UITableViewController {
         tableView.estimatedRowHeight = 44
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableView.reloadData()
+        
+        print("TAKE2) print 2d array: \(String(describing: pageInfo))")
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -39,13 +42,13 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return numSections
+        return pageInfo.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SectionCell", for: indexPath) as! SectionsCell
-        
+        print("Hello world")
         let section = Section(info: pageInfo[indexPath.row])
         
         cell.section = section

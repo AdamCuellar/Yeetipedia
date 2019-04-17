@@ -11,13 +11,24 @@ import UIKit
 class Section
 {
     var info: [String:Any]
-    var title: String
-    var author: String
     
+    var heading : String
+    var content : String
+    var pic_loc : String
+    var caption : String
+    var rank : Int
+
     init(info: [String:Any])
     {
         self.info = info
-        self.title = (info["page_title"] as? String)!
-        self.author = (info["page_author"] as? String)!
+
+        self.heading = (info["heading"] as? String)!
+        self.content = (info["content"] as? String)!
+        self.pic_loc = ""
+        self.caption = ""
+        
+        //self.pic_loc = (info["pic_loc"] as? String)!
+        //self.caption = (info["caption"] as? String)!
+        self.rank = (info["rank"] as? Int)!
     }
 }
