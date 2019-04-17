@@ -25,6 +25,8 @@ class TestingTable: UITableViewController {
     var cellInfoArray = [CellInfo]()
     // information for the page that is clicked on in the table of contents
     var pageInfo = [[String:Any]]()
+    var cellTitle = String()
+    var clicked = Bool()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +37,7 @@ class TestingTable: UITableViewController {
         // tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableView.tableFooterView = UIView()
         tableView.reloadData()
-        
+        clicked = false
 
     }
 
@@ -64,23 +66,27 @@ class TestingTable: UITableViewController {
  
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // get the page ID of the selected row
-        let cellID = cellInfoArray[indexPath.row].id
-        // we should store this particular user's permission level when they log in and use it here
-        let access = 50
-        
-        let pageSelect : [String : Any] = ["id": cellID, "access":access]
-        specific_page_request(dict: pageSelect) { (dict, error) in
-            print("hello world")
-            DispatchQueue.main.async
-                {
-                    // self.performSegue(withIdentifier: "go_to_table_of_contents", sender: nil)
-                    self.performSegue(withIdentifier:"push_specific_page", sender:nil)
+        if (clicked == false) {
+            clicked = true;
+            // get the page ID of the selected row
+            let cellID = cellInfoArray[indexPath.row].id
+            let cellTitle = cellInfoArray[indexPath.row].title
+            
+            // we should store this particular user's permission level when they log in and use it here
+            let access = 50
+            
+            let pageSelect : [String : Any] = ["id": cellID, "access":access]
+            specific_page_request(dict: pageSelect, title: cellTitle) { (dict, error) in
+                print("hello world")
+                DispatchQueue.main.async
+                    {
+                        // self.performSegue(withIdentifier: "go_to_table_of_contents", sender: nil)
+                        self.performSegue(withIdentifier:"push_specific_page", sender:nil)
+                }
             }
         }
-        
     }
-    func specific_page_request(dict: [String:Any] , completion: @escaping ([String: Any]?, Error?) -> Void)
+    func specific_page_request(dict: [String:Any] , title: String, completion: @escaping ([String: Any]?, Error?) -> Void)
     {
         //create the url with NSURL
         let url = URL(string: "https://www.yeetdog.com/Yeetipedia/wikipage.php")!
@@ -134,6 +140,7 @@ class TestingTable: UITableViewController {
                 
                 DispatchQueue.main.async {
                     self.pageInfo = sections!
+                    self.cellTitle = title
                 }
                 
                 completion(json, nil)
@@ -152,9 +159,8 @@ class TestingTable: UITableViewController {
             print("HELLO2")
             if let nextVC = segue.destination as? TableViewController {
                 nextVC.pageInfo = pageInfo
+                nextVC.cellTitle = cellTitle
             }
-
         }
     }
-    
 }

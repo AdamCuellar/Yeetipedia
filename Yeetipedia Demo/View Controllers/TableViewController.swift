@@ -12,6 +12,7 @@ class TableViewController: UITableViewController {
 
     var numSections = Int()
     var pageInfo = [[String:Any]]()
+    var cellTitle = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,7 @@ class TableViewController: UITableViewController {
         tableView.estimatedRowHeight = 44
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableView.reloadData()
-        
+        self.title = cellTitle
         print("TAKE2) print 2d array: \(String(describing: pageInfo))")
         
 

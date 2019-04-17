@@ -12,6 +12,7 @@ class Section
 {
     var info: [String:Any]
     
+    
     var heading : String
     var content : String
     var pic_loc : String
