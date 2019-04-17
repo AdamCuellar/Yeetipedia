@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		662263B222306B310087FAC0 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662263B122306B310087FAC0 /* ViewController3.swift */; };
 		662263B62230CC5C0087FAC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 662263B52230CC5C0087FAC0 /* Assets.xcassets */; };
 		662263B72230CFF00087FAC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6671A07E221CB870007C20F2 /* LaunchScreen.storyboard */; };
 		663231A3221D13120057F45B /* UiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663231A2221D13120057F45B /* UiView.swift */; };
@@ -40,7 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		662263B122306B310087FAC0 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		662263B52230CC5C0087FAC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		663231A2221D13120057F45B /* UiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiView.swift; sourceTree = "<group>"; };
 		6662B70D22431507007CD9BE /* SectionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsCell.swift; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 				6671A077221CB86F007C20F2 /* ViewController.swift */,
 				B3DB9F3422510B4000CE2884 /* TestingTable.swift */,
 				66A9D226224002C800A28D49 /* TableViewController.swift */,
-				662263B122306B310087FAC0 /* ViewController3.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -335,7 +332,6 @@
 				663231A3221D13120057F45B /* UiView.swift in Sources */,
 				66A9D227224002C800A28D49 /* TableViewController.swift in Sources */,
 				6671A078221CB86F007C20F2 /* ViewController.swift in Sources */,
-				662263B222306B310087FAC0 /* ViewController3.swift in Sources */,
 				B3DB9F3522510B4000CE2884 /* TestingTable.swift in Sources */,
 				6662B71022431E3C007CD9BE /* Section.swift in Sources */,
 				6671A076221CB86F007C20F2 /* AppDelegate.swift in Sources */,

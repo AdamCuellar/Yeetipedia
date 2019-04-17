@@ -33,15 +33,28 @@ class TestingTable: UITableViewController {
         
         // this is used to set the dynamic height and remove the lines between rows
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 44
+        tableView.estimatedRowHeight = 50
+        //tableView.rowHeight = 100
         // tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableView.tableFooterView = UIView()
         tableView.reloadData()
-        clicked = false
-
+        // add button
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: UIBarButtonItem.Style.plain, target: self, action: #selector(TestingTable.logoutTapped(_:)))
     }
-
-    // MARK: - Table view data source
+    
+    @objc func logoutTapped(_ sender:UIBarButtonItem!) {
+        print("logout tapped")
+        DispatchQueue.main.async {
+                // self.performSegue(withIdentifier: "go_to_table_of_contents", sender: nil)
+                self.performSegue(withIdentifier:"go_to_login", sender:nil)
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        clicked = false
+    }
+    
+    
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -163,4 +176,6 @@ class TestingTable: UITableViewController {
             }
         }
     }
+    
+
 }
