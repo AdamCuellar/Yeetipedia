@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,23 +15,23 @@
             <objects>
                 <viewController title="Login" id="BYZ-38-t0r" customClass="ViewController" customModule="Yeetipedia_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OXw-1d-B1c">
-                                <rect key="frame" x="118" y="439" width="179" height="30"/>
+                                <rect key="frame" x="64" y="265" width="192" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="username"/>
                             </textField>
                             <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="justified" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hPL-yn-WmP">
-                                <rect key="frame" x="120" y="496" width="175" height="30"/>
+                                <rect key="frame" x="64" y="325" width="192" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7NW-3M-VNq">
-                                <rect key="frame" x="134" y="634" width="146" height="47"/>
+                                <rect key="frame" x="96" y="385" width="128" height="47"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                 <state key="normal" title="Yeet In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -41,7 +41,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yeetipedia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soI-PT-0bD">
-                                <rect key="frame" x="42" y="163" width="331" height="60"/>
+                                <rect key="frame" x="32" y="65" width="256" height="60"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -49,19 +49,18 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="soI-PT-0bD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="119" id="1JC-Ls-b2H"/>
-                            <constraint firstItem="7NW-3M-VNq" firstAttribute="top" secondItem="hPL-yn-WmP" secondAttribute="bottom" constant="108" id="5eG-cW-pYI"/>
-                            <constraint firstItem="hPL-yn-WmP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="90x-zZ-8eo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="soI-PT-0bD" secondAttribute="trailing" constant="41" id="FkA-si-rdK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hPL-yn-WmP" secondAttribute="trailing" constant="119" id="K5a-gN-sX3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7NW-3M-VNq" secondAttribute="bottom" constant="181" id="LSo-ub-FzD"/>
-                            <constraint firstItem="OXw-1d-B1c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="118" id="T9M-1L-gdB"/>
-                            <constraint firstItem="soI-PT-0bD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="TzN-vO-C2g"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OXw-1d-B1c" secondAttribute="trailing" constant="117" id="Udf-zR-Kq9"/>
-                            <constraint firstItem="hPL-yn-WmP" firstAttribute="top" secondItem="OXw-1d-B1c" secondAttribute="bottom" constant="27" id="apq-BF-nrF"/>
-                            <constraint firstItem="7NW-3M-VNq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="134" id="ixw-a8-rEh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7NW-3M-VNq" secondAttribute="trailing" constant="134" id="k5l-n0-DtR"/>
-                            <constraint firstItem="OXw-1d-B1c" firstAttribute="top" secondItem="soI-PT-0bD" secondAttribute="bottom" constant="216" id="zMl-z1-xyA"/>
+                            <constraint firstItem="OXw-1d-B1c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1M7-g0-zfT"/>
+                            <constraint firstItem="hPL-yn-WmP" firstAttribute="top" secondItem="OXw-1d-B1c" secondAttribute="bottom" constant="30" id="4mA-am-jwv"/>
+                            <constraint firstItem="OXw-1d-B1c" firstAttribute="top" secondItem="soI-PT-0bD" secondAttribute="bottom" constant="140" id="7ST-ev-VnM"/>
+                            <constraint firstItem="OXw-1d-B1c" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="Cz0-jg-UKj"/>
+                            <constraint firstItem="hPL-yn-WmP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="I8u-pZ-M3h"/>
+                            <constraint firstItem="OXw-1d-B1c" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="40" id="Q4m-1W-N8C"/>
+                            <constraint firstItem="7NW-3M-VNq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R06-Px-UUw"/>
+                            <constraint firstItem="soI-PT-0bD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SUF-LK-j7d"/>
+                            <constraint firstItem="hPL-yn-WmP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bAB-5M-ZHW"/>
+                            <constraint firstItem="7NW-3M-VNq" firstAttribute="top" secondItem="hPL-yn-WmP" secondAttribute="bottom" constant="30" id="nvz-V3-4O6"/>
+                            <constraint firstItem="7NW-3M-VNq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="qb5-Tr-DLh"/>
+                            <constraint firstItem="soI-PT-0bD" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="vrP-dL-9Rw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -80,25 +79,25 @@
             <objects>
                 <tableViewController title="Content" id="k0u-fq-tTU" customClass="TableViewController" customModule="Yeetipedia_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vwY-FT-ybw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SectionCell" rowHeight="139" id="JJX-qk-JC3" customClass="SectionsCell" customModule="Yeetipedia_Demo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="139"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="139"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JJX-qk-JC3" id="QAH-ZU-2if">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="138.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="138.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Y4-Q5-TtV">
-                                            <rect key="frame" x="20" y="11" width="305" height="30"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Section Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Y4-Q5-TtV">
+                                            <rect key="frame" x="20" y="11" width="211" height="30"/>
                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KI8-z1-TMv">
-                                            <rect key="frame" x="20" y="46" width="374" height="81.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KI8-z1-TMv">
+                                            <rect key="frame" x="20" y="46" width="280" height="81.5"/>
                                             <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non rutrum dui. Integer a egestas orci, sed dignissim massa. Pellentesque sed mollis augue, in rutrum dolor. </string>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -140,25 +139,25 @@
             <objects>
                 <tableViewController id="ezM-Nx-jGS" customClass="TestingTable" customModule="Yeetipedia_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0C4-3z-mh1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TocIdentifier" rowHeight="90" id="WB0-nN-nAZ" customClass="CustomTocCell" customModule="Yeetipedia_Demo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="90"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WB0-nN-nAZ" id="M7n-mF-5xX">
-                                    <rect key="frame" x="0.0" y="0.0" width="376" height="89.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="286" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iD5-wf-AGn" userLabel="Title">
-                                            <rect key="frame" x="20" y="11" width="348" height="36"/>
+                                            <rect key="frame" x="16" y="11" width="262" height="36"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqT-fe-Ccp" userLabel="Author">
-                                            <rect key="frame" x="20" y="55" width="348" height="20.5"/>
+                                            <rect key="frame" x="16" y="55" width="262" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -194,48 +193,13 @@
             </objects>
             <point key="canvasLocation" x="1850.7246376811595" y="132.58928571428572"/>
         </scene>
-        <!--View Controller3-->
-        <scene sceneID="kqf-Lh-Uh1">
-            <objects>
-                <viewController id="Kx4-Za-AjN" customClass="ViewController3" customModule="Yeetipedia_Demo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="yex-xo-aEv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETe-cq-XVN">
-                                <rect key="frame" x="37" y="111" width="207" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="ETe-cq-XVN" secondAttribute="height" multiplier="207:49" id="FHS-bV-goo"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="RqH-sK-rWQ" firstAttribute="bottom" secondItem="ETe-cq-XVN" secondAttribute="bottom" constant="702" id="0EP-Le-5YD"/>
-                            <constraint firstItem="RqH-sK-rWQ" firstAttribute="trailing" secondItem="ETe-cq-XVN" secondAttribute="trailing" constant="170" id="MyT-N7-yxE"/>
-                            <constraint firstItem="ETe-cq-XVN" firstAttribute="top" secondItem="RqH-sK-rWQ" secondAttribute="top" constant="67" id="XvK-Cc-dNp"/>
-                            <constraint firstItem="ETe-cq-XVN" firstAttribute="leading" secondItem="RqH-sK-rWQ" secondAttribute="leading" constant="37" id="zpV-Ke-wBH"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="RqH-sK-rWQ"/>
-                    </view>
-                    <connections>
-                        <outlet property="sectionTitle" destination="ETe-cq-XVN" id="V4H-PB-uuS"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fqX-rv-438" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3095.6521739130435" y="859.82142857142856"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="IzA-Rw-Xeq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M3A-PT-e6C" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nkz-Ql-XkR">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
