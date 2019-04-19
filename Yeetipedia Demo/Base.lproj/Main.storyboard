@@ -46,6 +46,17 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Bn-vy-4eP">
+                                <rect key="frame" x="68" y="443" width="188" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Not a Yeeter yet? Sign up here!">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2o9-wM-8XX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -68,11 +79,83 @@
                         <outlet property="password" destination="hPL-yn-WmP" id="rDd-Gd-p9Y"/>
                         <outlet property="username" destination="OXw-1d-B1c" id="tL6-b1-2WT"/>
                         <segue destination="M3A-PT-e6C" kind="presentation" identifier="go_to_toc" id="Jcn-S6-kCX"/>
+                        <segue destination="Ct1-ER-fhD" kind="presentation" identifier="goToSignUp" id="cdF-hA-D6w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-41" y="133"/>
+        </scene>
+        <!--Sign UpVC-->
+        <scene sceneID="lUZ-tX-5lV">
+            <objects>
+                <viewController id="Ct1-ER-fhD" customClass="SignUpVC" customModule="Yeetipedia_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zgK-xb-Db0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EnO-v8-Gbp">
+                                <rect key="frame" x="130" y="392" width="62" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Sign Up!">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUp:" destination="Ct1-ER-fhD" eventType="touchUpInside" id="nja-92-EZI"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="backToLogIn" id="TKY-Ub-3c4"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bL5-y0-B8q">
+                                <rect key="frame" x="64" y="225" width="192" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="irM-pY-ta4">
+                                <rect key="frame" x="64" y="279" width="192" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6kg-Fv-5F4">
+                                <rect key="frame" x="64" y="331" width="192" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Become a Yeeter!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueN-Gd-NVh">
+                                <rect key="frame" x="6" y="59" width="308" height="46"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ueN-Gd-NVh" firstAttribute="centerX" secondItem="bL5-y0-B8q" secondAttribute="centerX" id="39a-bM-Ube"/>
+                            <constraint firstItem="ueN-Gd-NVh" firstAttribute="top" secondItem="5NJ-Iq-43r" secondAttribute="top" constant="39" id="CWb-4F-1eX"/>
+                            <constraint firstItem="irM-pY-ta4" firstAttribute="trailing" secondItem="6kg-Fv-5F4" secondAttribute="trailing" id="ItC-49-lHR"/>
+                            <constraint firstItem="bL5-y0-B8q" firstAttribute="centerY" secondItem="zgK-xb-Db0" secondAttribute="centerY" id="QS5-eA-iDT"/>
+                            <constraint firstItem="bL5-y0-B8q" firstAttribute="trailing" secondItem="irM-pY-ta4" secondAttribute="trailing" id="WiL-a6-XcL"/>
+                            <constraint firstItem="EnO-v8-Gbp" firstAttribute="leading" secondItem="5NJ-Iq-43r" secondAttribute="leading" constant="130" id="aLJ-mn-0lF"/>
+                            <constraint firstItem="6kg-Fv-5F4" firstAttribute="top" secondItem="irM-pY-ta4" secondAttribute="bottom" constant="22" id="bvG-HD-Ycx"/>
+                            <constraint firstItem="bL5-y0-B8q" firstAttribute="leading" secondItem="irM-pY-ta4" secondAttribute="leading" id="dTB-Sv-9co"/>
+                            <constraint firstItem="ueN-Gd-NVh" firstAttribute="centerX" secondItem="zgK-xb-Db0" secondAttribute="centerX" id="gkO-zV-sYT"/>
+                            <constraint firstItem="irM-pY-ta4" firstAttribute="top" secondItem="bL5-y0-B8q" secondAttribute="bottom" constant="24" id="nQC-jG-4ma"/>
+                            <constraint firstItem="irM-pY-ta4" firstAttribute="leading" secondItem="6kg-Fv-5F4" secondAttribute="leading" id="pkB-vp-jO2"/>
+                            <constraint firstItem="EnO-v8-Gbp" firstAttribute="top" secondItem="6kg-Fv-5F4" secondAttribute="bottom" constant="31" id="roT-9t-d7U"/>
+                            <constraint firstItem="bL5-y0-B8q" firstAttribute="leading" secondItem="5NJ-Iq-43r" secondAttribute="leading" constant="64" id="xLZ-vx-Abf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5NJ-Iq-43r"/>
+                    </view>
+                    <connections>
+                        <outlet property="confirmPass" destination="6kg-Fv-5F4" id="1Ex-5l-6w0"/>
+                        <outlet property="password" destination="irM-pY-ta4" id="Awi-N9-Skt"/>
+                        <outlet property="username" destination="bL5-y0-B8q" id="lmg-DT-yrf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lG8-Te-zzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-41.25" y="930"/>
         </scene>
         <!--Content-->
         <scene sceneID="XVA-qO-Xmz">
@@ -110,7 +193,7 @@
                                         <constraint firstAttribute="bottom" secondItem="KI8-z1-TMv" secondAttribute="bottom" constant="11" id="Ajw-hQ-vZj"/>
                                         <constraint firstItem="KI8-z1-TMv" firstAttribute="trailing" secondItem="QAH-ZU-2if" secondAttribute="trailingMargin" id="HPW-7d-QtA"/>
                                         <constraint firstItem="8Y4-Q5-TtV" firstAttribute="top" secondItem="QAH-ZU-2if" secondAttribute="top" constant="11" id="LWN-4o-pJQ"/>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8Y4-Q5-TtV" secondAttribute="trailing" symbolic="YES" id="SbS-9u-h2H"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8Y4-Q5-TtV" secondAttribute="trailing" constant="20" symbolic="YES" id="SbS-9u-h2H"/>
                                         <constraint firstItem="8Y4-Q5-TtV" firstAttribute="leading" secondItem="QAH-ZU-2if" secondAttribute="leading" constant="20" id="Zpk-FZ-30G"/>
                                         <constraint firstItem="KI8-z1-TMv" firstAttribute="leading" secondItem="QAH-ZU-2if" secondAttribute="leading" constant="20" id="bEl-89-PMv"/>
                                     </constraints>
@@ -211,4 +294,7 @@
             <point key="canvasLocation" x="1014" y="133"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="TKY-Ub-3c4"/>
+    </inferredMetricsTieBreakers>
 </document>
