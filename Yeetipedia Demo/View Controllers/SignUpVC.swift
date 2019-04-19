@@ -18,14 +18,14 @@ class SignUpVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // set background
         
         // add colored border to username and password text fields
         let fieldColor = UIColor.black
         username.layer.borderColor = fieldColor.cgColor
         password.layer.borderColor = fieldColor.cgColor
         confirmPass.layer.borderColor = fieldColor.cgColor
+        
+        // 
         
     }
     
