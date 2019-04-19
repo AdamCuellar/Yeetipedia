@@ -40,10 +40,7 @@ class SignUpVC: UIViewController {
             { (result, error) in
                 if result?["state"] as! String == "Success"
                 {
-                    DispatchQueue.main.async
-                    {
-                        self.performSegue(withIdentifier: "back_to_login", sender: nil)
-                    }
+
                 }
             }
         }
@@ -55,6 +52,10 @@ class SignUpVC: UIViewController {
     
     
     @IBAction func clicked_go_to_login(_ sender: Any) {
+        DispatchQueue.main.async
+            {
+                self.performSegue(withIdentifier: "back_to_login", sender: nil)
+        }
     }
     
     func signUpPost(username: String, password: String, confirmPass: String, completion: @escaping ([String: Any]?, Error?) -> Void)
