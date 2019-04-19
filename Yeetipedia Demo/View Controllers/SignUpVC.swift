@@ -18,7 +18,6 @@ class SignUpVC: UIViewController {
         super.viewDidLoad()
 
         // set background
-         view.addBackground(imageName: "backgroundWoman.png")
         
         // add colored border to username and password text fields
         let fieldColor = UIColor.black
@@ -43,7 +42,7 @@ class SignUpVC: UIViewController {
                 {
                     DispatchQueue.main.async
                     {
-                        self.performSegue(withIdentifier: "backToLogIn", sender: nil)
+                        self.performSegue(withIdentifier: "back_to_login", sender: nil)
                     }
                 }
             }
@@ -54,6 +53,9 @@ class SignUpVC: UIViewController {
         }
     }
     
+    
+    @IBAction func clicked_go_to_login(_ sender: Any) {
+    }
     
     func signUpPost(username: String, password: String, confirmPass: String, completion: @escaping ([String: Any]?, Error?) -> Void)
     {

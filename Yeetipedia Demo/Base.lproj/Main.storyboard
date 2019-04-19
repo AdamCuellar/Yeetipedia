@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController title="Login" id="BYZ-38-t0r" customClass="ViewController" customModule="Yeetipedia_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OXw-1d-B1c">
-                                <rect key="frame" x="16" y="308.66666666666669" width="343" height="45"/>
+                                <rect key="frame" x="16" y="350.5" width="382" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="lXH-H7-VBJ"/>
                                 </constraints>
@@ -28,7 +28,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="username"/>
                             </textField>
                             <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="justified" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hPL-yn-WmP">
-                                <rect key="frame" x="16" y="383.66666666666669" width="343" height="45"/>
+                                <rect key="frame" x="16" y="425.5" width="382" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="SLo-dY-fK9"/>
                                 </constraints>
@@ -37,7 +37,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7NW-3M-VNq" colorLabel="IBBuiltInLabel-Blue">
-                                <rect key="frame" x="16" y="458.66666666666669" width="343" height="45"/>
+                                <rect key="frame" x="16" y="500.5" width="382" height="45"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="CLp-3k-Wz0"/>
@@ -51,7 +51,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Bn-vy-4eP">
-                                <rect key="frame" x="94" y="565.66666666666663" width="187" height="28"/>
+                                <rect key="frame" x="94" y="607.5" width="226" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Not a Yeeter yet? Sign up here!">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -61,7 +61,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yeetipedia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soI-PT-0bD">
-                                <rect key="frame" x="16" y="208.66666666666666" width="343" height="59.999999999999972"/>
+                                <rect key="frame" x="16" y="250.5" width="382" height="60"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -107,61 +107,91 @@
             <objects>
                 <viewController id="Ct1-ER-fhD" customClass="SignUpVC" customModule="Yeetipedia_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zgK-xb-Db0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bL5-y0-B8q">
-                                <rect key="frame" x="64" y="391" width="247" height="30"/>
+                                <rect key="frame" x="16" y="326.5" width="382" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="kC5-Bu-g3N"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="irM-pY-ta4">
-                                <rect key="frame" x="64" y="279" width="247" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="irM-pY-ta4">
+                                <rect key="frame" x="16" y="401.5" width="382" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="ytP-gV-SFD"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6kg-Fv-5F4">
-                                <rect key="frame" x="64" y="331" width="247" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6kg-Fv-5F4">
+                                <rect key="frame" x="16" y="476.5" width="382" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="0nN-Tq-fsQ"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Become a Yeeter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueN-Gd-NVh">
-                                <rect key="frame" x="40" y="83" width="295" height="46"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Become a Yeeter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueN-Gd-NVh">
+                                <rect key="frame" x="16" y="245.5" width="382" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="34"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EnO-v8-Gbp">
-                                <rect key="frame" x="125" y="392" width="125" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EnO-v8-Gbp">
+                                <rect key="frame" x="16" y="551.5" width="382" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.47934520244598389" blue="0.99908632040023804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="On9-a9-maG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
                                 <state key="normal" title="Yeet Up!">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="signUp:" destination="Ct1-ER-fhD" eventType="touchUpInside" id="nja-92-EZI"/>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="backToLogIn" id="TKY-Ub-3c4"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="back_to_login" id="TKY-Ub-3c4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eeg-52-H4H">
+                                <rect key="frame" x="116.5" y="658.5" width="181" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Already a Yeeter? Log in here!">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clicked_go_to_login:" destination="Ct1-ER-fhD" eventType="touchUpInside" id="RDM-8j-mIK"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.96223622560501099" green="0.90668928623199463" blue="0.84778249263763428" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ueN-Gd-NVh" firstAttribute="centerX" secondItem="bL5-y0-B8q" secondAttribute="centerX" id="39a-bM-Ube"/>
-                            <constraint firstItem="ueN-Gd-NVh" firstAttribute="top" secondItem="5NJ-Iq-43r" secondAttribute="top" constant="39" id="CWb-4F-1eX"/>
-                            <constraint firstItem="irM-pY-ta4" firstAttribute="trailing" secondItem="6kg-Fv-5F4" secondAttribute="trailing" id="ItC-49-lHR"/>
-                            <constraint firstItem="bL5-y0-B8q" firstAttribute="centerY" secondItem="zgK-xb-Db0" secondAttribute="centerY" id="QS5-eA-iDT"/>
-                            <constraint firstItem="5NJ-Iq-43r" firstAttribute="bottom" secondItem="EnO-v8-Gbp" secondAttribute="bottom" constant="56" id="VLN-kA-25n"/>
-                            <constraint firstItem="bL5-y0-B8q" firstAttribute="trailing" secondItem="irM-pY-ta4" secondAttribute="trailing" id="WiL-a6-XcL"/>
-                            <constraint firstItem="5NJ-Iq-43r" firstAttribute="trailing" secondItem="EnO-v8-Gbp" secondAttribute="trailing" constant="125" id="XBS-0c-qhD"/>
-                            <constraint firstItem="EnO-v8-Gbp" firstAttribute="leading" secondItem="5NJ-Iq-43r" secondAttribute="leading" constant="125" id="aLJ-mn-0lF"/>
-                            <constraint firstItem="6kg-Fv-5F4" firstAttribute="top" secondItem="irM-pY-ta4" secondAttribute="bottom" constant="22" id="bvG-HD-Ycx"/>
-                            <constraint firstItem="bL5-y0-B8q" firstAttribute="leading" secondItem="irM-pY-ta4" secondAttribute="leading" id="dTB-Sv-9co"/>
-                            <constraint firstItem="ueN-Gd-NVh" firstAttribute="centerX" secondItem="zgK-xb-Db0" secondAttribute="centerX" id="gkO-zV-sYT"/>
-                            <constraint firstItem="irM-pY-ta4" firstAttribute="top" secondItem="bL5-y0-B8q" secondAttribute="bottom" constant="24" id="nQC-jG-4ma"/>
-                            <constraint firstItem="irM-pY-ta4" firstAttribute="leading" secondItem="6kg-Fv-5F4" secondAttribute="leading" id="pkB-vp-jO2"/>
-                            <constraint firstItem="EnO-v8-Gbp" firstAttribute="top" secondItem="6kg-Fv-5F4" secondAttribute="bottom" constant="31" id="roT-9t-d7U"/>
-                            <constraint firstItem="bL5-y0-B8q" firstAttribute="leading" secondItem="5NJ-Iq-43r" secondAttribute="leading" constant="64" id="xLZ-vx-Abf"/>
+                            <constraint firstItem="6kg-Fv-5F4" firstAttribute="leading" secondItem="5NJ-Iq-43r" secondAttribute="leading" constant="16" id="06w-qj-r7x"/>
+                            <constraint firstItem="irM-pY-ta4" firstAttribute="top" secondItem="bL5-y0-B8q" secondAttribute="bottom" constant="30" id="15g-no-gbM"/>
+                            <constraint firstItem="5NJ-Iq-43r" firstAttribute="trailing" secondItem="6kg-Fv-5F4" secondAttribute="trailing" constant="16" id="2dA-U6-phs"/>
+                            <constraint firstItem="EnO-v8-Gbp" firstAttribute="leading" secondItem="5NJ-Iq-43r" secondAttribute="leading" constant="16" id="9FB-1R-Y4I"/>
+                            <constraint firstItem="5NJ-Iq-43r" firstAttribute="trailing" secondItem="bL5-y0-B8q" secondAttribute="trailing" constant="16" id="B8r-w0-wke"/>
+                            <constraint firstItem="ueN-Gd-NVh" firstAttribute="centerX" secondItem="zgK-xb-Db0" secondAttribute="centerX" id="BGp-qG-tMs"/>
+                            <constraint firstItem="irM-pY-ta4" firstAttribute="leading" secondItem="5NJ-Iq-43r" secondAttribute="leading" constant="16" id="Bub-K9-198"/>
+                            <constraint firstItem="Eeg-52-H4H" firstAttribute="centerX" secondItem="zgK-xb-Db0" secondAttribute="centerX" id="DdR-kB-3lR"/>
+                            <constraint firstItem="EnO-v8-Gbp" firstAttribute="centerX" secondItem="zgK-xb-Db0" secondAttribute="centerX" id="OBD-Y8-eWt"/>
+                            <constraint firstItem="bL5-y0-B8q" firstAttribute="top" secondItem="ueN-Gd-NVh" secondAttribute="bottom" constant="40" id="RSA-b9-rvz"/>
+                            <constraint firstItem="6kg-Fv-5F4" firstAttribute="top" secondItem="irM-pY-ta4" secondAttribute="bottom" constant="30" id="VOW-Hy-oqa"/>
+                            <constraint firstItem="Eeg-52-H4H" firstAttribute="top" secondItem="EnO-v8-Gbp" secondAttribute="bottom" constant="62" id="YC8-JH-pmD"/>
+                            <constraint firstItem="5NJ-Iq-43r" firstAttribute="trailing" secondItem="irM-pY-ta4" secondAttribute="trailing" constant="16" id="YbW-cp-FcA"/>
+                            <constraint firstItem="EnO-v8-Gbp" firstAttribute="top" secondItem="6kg-Fv-5F4" secondAttribute="bottom" constant="30" id="akX-sY-Hi6"/>
+                            <constraint firstItem="bL5-y0-B8q" firstAttribute="leading" secondItem="5NJ-Iq-43r" secondAttribute="leading" constant="16" id="auC-XC-8We"/>
+                            <constraint firstItem="5NJ-Iq-43r" firstAttribute="trailing" secondItem="ueN-Gd-NVh" secondAttribute="trailing" constant="16" id="gPu-5c-w5K"/>
+                            <constraint firstItem="irM-pY-ta4" firstAttribute="centerY" secondItem="zgK-xb-Db0" secondAttribute="centerY" constant="-24" id="n84-hG-Is3"/>
+                            <constraint firstItem="ueN-Gd-NVh" firstAttribute="leading" secondItem="5NJ-Iq-43r" secondAttribute="leading" constant="16" id="tgq-va-GEc"/>
+                            <constraint firstItem="bL5-y0-B8q" firstAttribute="centerX" secondItem="zgK-xb-Db0" secondAttribute="centerX" id="tpl-y2-ua3"/>
+                            <constraint firstItem="6kg-Fv-5F4" firstAttribute="centerX" secondItem="zgK-xb-Db0" secondAttribute="centerX" id="wNO-5H-iv8"/>
+                            <constraint firstItem="5NJ-Iq-43r" firstAttribute="trailing" secondItem="EnO-v8-Gbp" secondAttribute="trailing" constant="16" id="wYM-dO-iy5"/>
+                            <constraint firstItem="irM-pY-ta4" firstAttribute="centerX" secondItem="zgK-xb-Db0" secondAttribute="centerX" id="yV8-0D-ogc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5NJ-Iq-43r"/>
                     </view>
@@ -169,36 +199,37 @@
                         <outlet property="confirmPass" destination="6kg-Fv-5F4" id="1Ex-5l-6w0"/>
                         <outlet property="password" destination="irM-pY-ta4" id="Awi-N9-Skt"/>
                         <outlet property="username" destination="bL5-y0-B8q" id="lmg-DT-yrf"/>
+                        <segue destination="M3A-PT-e6C" kind="presentation" identifier="sign_up_to_toc" id="nmP-SG-sZs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lG8-Te-zzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-41.25" y="930"/>
+            <point key="canvasLocation" x="-42" y="935"/>
         </scene>
         <!--Content-->
         <scene sceneID="XVA-qO-Xmz">
             <objects>
                 <tableViewController title="Content" id="k0u-fq-tTU" customClass="TableViewController" customModule="Yeetipedia_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vwY-FT-ybw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SectionCell" rowHeight="139" id="JJX-qk-JC3" customClass="SectionsCell" customModule="Yeetipedia_Demo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="139"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="139"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JJX-qk-JC3" id="QAH-ZU-2if">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="138.66666666666666"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="138.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Y4-Q5-TtV">
-                                            <rect key="frame" x="20" y="11" width="152.66666666666666" height="30"/>
+                                            <rect key="frame" x="20" y="11" width="152.5" height="30"/>
                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KI8-z1-TMv">
-                                            <rect key="frame" x="20" y="46.000000000000007" width="339" height="81.666666666666686"/>
+                                            <rect key="frame" x="20" y="46" width="374" height="81.5"/>
                                             <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non rutrum dui. Integer a egestas orci, sed dignissim massa. Pellentesque sed mollis augue, in rutrum dolor. </string>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -238,25 +269,25 @@
             <objects>
                 <tableViewController id="ezM-Nx-jGS" customClass="TestingTable" customModule="Yeetipedia_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0C4-3z-mh1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TocIdentifier" rowHeight="90" id="WB0-nN-nAZ" customClass="CustomTocCell" customModule="Yeetipedia_Demo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WB0-nN-nAZ" id="M7n-mF-5xX">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="89.666666666666671"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="376" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iD5-wf-AGn" userLabel="Title">
-                                            <rect key="frame" x="16" y="11" width="317" height="36"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iD5-wf-AGn" userLabel="Title">
+                                            <rect key="frame" x="20" y="11" width="348" height="36"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqT-fe-Ccp" userLabel="Author">
-                                            <rect key="frame" x="16" y="55" width="317" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqT-fe-Ccp" userLabel="Author">
+                                            <rect key="frame" x="20" y="55" width="348" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -299,7 +330,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M3A-PT-e6C" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nkz-Ql-XkR">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.95268374681472778" green="0.90667682886123657" blue="0.8548927903175354" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
@@ -314,6 +345,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="nmP-SG-sZs"/>
         <segue reference="TKY-Ub-3c4"/>
     </inferredMetricsTieBreakers>
 </document>

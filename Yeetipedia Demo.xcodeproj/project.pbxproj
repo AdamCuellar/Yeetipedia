@@ -124,7 +124,6 @@
 				663231A2221D13120057F45B /* UiView.swift */,
 				6671A079221CB86F007C20F2 /* Main.storyboard */,
 				6662B70F22431E3C007CD9BE /* Section.swift */,
-				66F0A45B22693D250015A0CC /* SignUpVC.swift */,
 				6662B70D22431507007CD9BE /* SectionsCell.swift */,
 				6614A0D7226A2F1D00FC8ED1 /* Font */,
 				66C2FA2F224062050052004C /* View Controllers */,
@@ -156,6 +155,7 @@
 		66C2FA2F224062050052004C /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				66F0A45B22693D250015A0CC /* SignUpVC.swift */,
 				6671A077221CB86F007C20F2 /* ViewController.swift */,
 				B3DB9F3422510B4000CE2884 /* TestingTable.swift */,
 				66A9D226224002C800A28D49 /* TableViewController.swift */,
