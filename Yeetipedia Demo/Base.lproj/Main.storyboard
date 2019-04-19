@@ -19,34 +19,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OXw-1d-B1c">
-                                <rect key="frame" x="75" y="431" width="225" height="30"/>
+                                <rect key="frame" x="16" y="308.66666666666669" width="343" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="lXH-H7-VBJ"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="username"/>
                             </textField>
-                            <textField contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="justified" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hPL-yn-WmP">
-                                <rect key="frame" x="75" y="325" width="225" height="30"/>
+                            <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="justified" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hPL-yn-WmP">
+                                <rect key="frame" x="16" y="383.66666666666669" width="343" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="SLo-dY-fK9"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7NW-3M-VNq">
-                                <rect key="frame" x="112.66666666666669" y="385" width="150" height="47"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7NW-3M-VNq" colorLabel="IBBuiltInLabel-Blue">
+                                <rect key="frame" x="16" y="458.66666666666669" width="343" height="45"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="CLp-3k-Wz0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                 <state key="normal" title="Yeet In">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="logIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WDs-ti-Ook"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yeetipedia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soI-PT-0bD">
-                                <rect key="frame" x="37.666666666666657" y="201" width="300" height="60"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Bn-vy-4eP">
-                                <rect key="frame" x="66" y="661" width="243" height="28"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Bn-vy-4eP">
+                                <rect key="frame" x="94" y="565.66666666666663" width="187" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Not a Yeeter yet? Sign up here!">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -55,29 +60,38 @@
                                     <action selector="goToSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2o9-wM-8XX"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yeetipedia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soI-PT-0bD">
+                                <rect key="frame" x="16" y="208.66666666666666" width="343" height="59.999999999999972"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.94876247644424438" green="0.90673202276229858" blue="0.85097092390060425" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="OXw-1d-B1c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1M7-g0-zfT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6Bn-vy-4eP" secondAttribute="bottom" constant="9" id="2bU-Wu-7Uk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Bn-vy-4eP" secondAttribute="trailing" constant="64" id="4FW-96-dxD"/>
-                            <constraint firstItem="hPL-yn-WmP" firstAttribute="top" secondItem="OXw-1d-B1c" secondAttribute="bottom" constant="30" id="4mA-am-jwv"/>
-                            <constraint firstItem="OXw-1d-B1c" firstAttribute="top" secondItem="soI-PT-0bD" secondAttribute="bottom" constant="170" id="7ST-ev-VnM"/>
-                            <constraint firstItem="OXw-1d-B1c" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="Cz0-jg-UKj"/>
-                            <constraint firstItem="hPL-yn-WmP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="I8u-pZ-M3h"/>
-                            <constraint firstItem="OXw-1d-B1c" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="40" id="Q4m-1W-N8C"/>
-                            <constraint firstItem="7NW-3M-VNq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R06-Px-UUw"/>
-                            <constraint firstItem="soI-PT-0bD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SUF-LK-j7d"/>
-                            <constraint firstItem="6Bn-vy-4eP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="b0j-lF-a0I"/>
-                            <constraint firstItem="hPL-yn-WmP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bAB-5M-ZHW"/>
-                            <constraint firstItem="7NW-3M-VNq" firstAttribute="top" secondItem="hPL-yn-WmP" secondAttribute="bottom" constant="30" id="nvz-V3-4O6"/>
-                            <constraint firstItem="7NW-3M-VNq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="qb5-Tr-DLh"/>
-                            <constraint firstItem="6Bn-vy-4eP" firstAttribute="top" secondItem="7NW-3M-VNq" secondAttribute="bottom" constant="11" id="vXs-Uh-MmT"/>
-                            <constraint firstItem="soI-PT-0bD" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="vrP-dL-9Rw"/>
+                            <constraint firstItem="hPL-yn-WmP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Jp-0g-mpH"/>
+                            <constraint firstItem="6Bn-vy-4eP" firstAttribute="top" secondItem="7NW-3M-VNq" secondAttribute="bottom" constant="62" id="98O-Ku-i04"/>
+                            <constraint firstItem="OXw-1d-B1c" firstAttribute="top" secondItem="soI-PT-0bD" secondAttribute="bottom" constant="40" id="Ebm-Rx-mms"/>
+                            <constraint firstItem="OXw-1d-B1c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LP5-Hb-RGu"/>
+                            <constraint firstItem="hPL-yn-WmP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Pxt-AJ-TU9"/>
+                            <constraint firstItem="hPL-yn-WmP" firstAttribute="top" secondItem="OXw-1d-B1c" secondAttribute="bottom" constant="30" id="THE-ub-Vrz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7NW-3M-VNq" secondAttribute="trailing" constant="16" id="VrQ-bt-2Go"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OXw-1d-B1c" secondAttribute="trailing" constant="16" id="Xsc-RX-jkr"/>
+                            <constraint firstItem="OXw-1d-B1c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="c1L-1X-256"/>
+                            <constraint firstItem="7NW-3M-VNq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="chC-Dc-sKt"/>
+                            <constraint firstItem="hPL-yn-WmP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ghR-SO-da3"/>
+                            <constraint firstItem="7NW-3M-VNq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hux-AN-vI8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="soI-PT-0bD" secondAttribute="trailing" constant="16" id="hyf-HS-avZ"/>
+                            <constraint firstItem="soI-PT-0bD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kWB-eW-cs5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hPL-yn-WmP" secondAttribute="trailing" constant="16" id="mvJ-bm-Pih"/>
+                            <constraint firstItem="soI-PT-0bD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vSB-3e-iOV"/>
+                            <constraint firstItem="6Bn-vy-4eP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="94" id="wpp-iZ-WNO"/>
+                            <constraint firstItem="7NW-3M-VNq" firstAttribute="top" secondItem="hPL-yn-WmP" secondAttribute="bottom" constant="30" id="yQQ-NY-GMZ"/>
+                            <constraint firstItem="6Bn-vy-4eP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zvl-KS-bvM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="login_button" destination="7NW-3M-VNq" id="Q4O-VB-qrh"/>
                         <outlet property="password" destination="hPL-yn-WmP" id="rDd-Gd-p9Y"/>
                         <outlet property="username" destination="OXw-1d-B1c" id="tL6-b1-2WT"/>
                         <segue destination="M3A-PT-e6C" kind="presentation" identifier="go_to_toc" id="Jcn-S6-kCX"/>
@@ -120,13 +134,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EnO-v8-Gbp">
-                                <rect key="frame" x="125" y="514" width="125" height="32"/>
+                                <rect key="frame" x="125" y="392" width="125" height="32"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
                                 <state key="normal" title="Yeet Up!">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="signUp:" destination="Ct1-ER-fhD" eventType="touchUpInside" id="nja-92-EZI"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="backToLogIn" id="TKY-Ub-3c4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -154,7 +169,6 @@
                         <outlet property="confirmPass" destination="6kg-Fv-5F4" id="1Ex-5l-6w0"/>
                         <outlet property="password" destination="irM-pY-ta4" id="Awi-N9-Skt"/>
                         <outlet property="username" destination="bL5-y0-B8q" id="lmg-DT-yrf"/>
-                        <segue destination="M3A-PT-e6C" kind="presentation" identifier="loginAfterUp" id="9Cz-hf-4ug"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lG8-Te-zzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -300,6 +314,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9Cz-hf-4ug"/>
+        <segue reference="TKY-Ub-3c4"/>
     </inferredMetricsTieBreakers>
 </document>

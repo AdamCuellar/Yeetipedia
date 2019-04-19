@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     var table_of_contents_info = [[String:Any]]()
     var http = HTTP_Request()
 
+    @IBOutlet weak var login_button: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,6 +25,11 @@ class ViewController: UIViewController {
         let fieldColor = UIColor.black
         username.layer.borderColor = fieldColor.cgColor
         password.layer.borderColor = fieldColor.cgColor
+        
+        // set style for the button
+        login_button.backgroundColor=self.view.tintColor
+        login_button.layer.cornerRadius = 5; // this value vary as per your desire
+        login_button.clipsToBounds = true
         
     }
     
