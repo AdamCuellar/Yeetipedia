@@ -20,6 +20,7 @@
 		6671A08B221CB871007C20F2 /* Yeetipedia_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6671A08A221CB871007C20F2 /* Yeetipedia_DemoTests.swift */; };
 		6671A096221CB871007C20F2 /* Yeetipedia_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6671A095221CB871007C20F2 /* Yeetipedia_DemoUITests.swift */; };
 		66A9D227224002C800A28D49 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A9D226224002C800A28D49 /* TableViewController.swift */; };
+		66AFA963226A39710062FA64 /* HttpReqs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AFA962226A39710062FA64 /* HttpReqs.swift */; };
 		66F0A45C22693D250015A0CC /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F0A45B22693D250015A0CC /* SignUpVC.swift */; };
 		B3DB9F3522510B4000CE2884 /* TestingTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB9F3422510B4000CE2884 /* TestingTable.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		6671A095221CB871007C20F2 /* Yeetipedia_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yeetipedia_DemoUITests.swift; sourceTree = "<group>"; };
 		6671A097221CB871007C20F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66A9D226224002C800A28D49 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		66AFA962226A39710062FA64 /* HttpReqs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpReqs.swift; sourceTree = "<group>"; };
 		66F0A45B22693D250015A0CC /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		B3DB9F3422510B4000CE2884 /* TestingTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,8 +128,8 @@
 				663231A2221D13120057F45B /* UiView.swift */,
 				6671A079221CB86F007C20F2 /* Main.storyboard */,
 				6662B70F22431E3C007CD9BE /* Section.swift */,
-				66F0A45B22693D250015A0CC /* SignUpVC.swift */,
 				6662B70D22431507007CD9BE /* SectionsCell.swift */,
+				66AFA962226A39710062FA64 /* HttpReqs.swift */,
 				6614A0D7226A2F1D00FC8ED1 /* Font */,
 				66C2FA2F224062050052004C /* View Controllers */,
 				662263B52230CC5C0087FAC0 /* Assets.xcassets */,
@@ -158,6 +160,7 @@
 		66C2FA2F224062050052004C /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				66F0A45B22693D250015A0CC /* SignUpVC.swift */,
 				6671A077221CB86F007C20F2 /* ViewController.swift */,
 				B3DB9F3422510B4000CE2884 /* TestingTable.swift */,
 				66A9D226224002C800A28D49 /* TableViewController.swift */,
@@ -348,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66F0A45C22693D250015A0CC /* SignUpVC.swift in Sources */,
+				66AFA963226A39710062FA64 /* HttpReqs.swift in Sources */,
 				6662B70E22431507007CD9BE /* SectionsCell.swift in Sources */,
 				663231A3221D13120057F45B /* UiView.swift in Sources */,
 				66A9D227224002C800A28D49 /* TableViewController.swift in Sources */,
