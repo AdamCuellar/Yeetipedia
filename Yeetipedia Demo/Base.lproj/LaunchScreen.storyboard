@@ -21,11 +21,10 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yeetipedia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAK-Wt-XIn">
                                 <rect key="frame" x="48" y="300.5" width="279" height="66"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="55"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" red="0.94876247644424438" green="0.90673202276229858" blue="0.85097092390060425" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="UAK-Wt-XIn" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="UGd-KQ-D7L"/>
                             <constraint firstItem="UAK-Wt-XIn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="sAy-th-kcn"/>

@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // set background
-        view.addBackground(imageName: "backgroundCities.jpg")
+        // view.addBackground(imageName: "backgroundCities.jpg")
         
         // add colored border to username and password text fields
         let fieldColor = UIColor.black
