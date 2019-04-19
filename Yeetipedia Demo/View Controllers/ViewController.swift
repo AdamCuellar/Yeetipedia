@@ -210,7 +210,6 @@ class ViewController: UIViewController {
     // Pass the selected object to the new view controller.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "go_to_toc" {
-            print("HELLO")
             if let navigationVC = segue.destination as? UINavigationController, let myViewController = navigationVC.topViewController as? TestingTable {
                 myViewController.cellInfoArray = createCellInfoArray()
             }
@@ -218,7 +217,6 @@ class ViewController: UIViewController {
     }
     
     func createCellInfoArray () -> [CellInfo] {
-        print("HELLO2")
         // since the inner array will have the same parameters each time (Title, Author, maybe summary)
         var cellInfoArray = [CellInfo]();
         

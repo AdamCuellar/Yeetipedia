@@ -40,8 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6614A0D8226A2F2900FC8ED1 /* rockb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rockb.ttf; sourceTree = "<group>"; };
-		6614A0D9226A2F2900FC8ED1 /* ROCK.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = ROCK.TTF; sourceTree = "<group>"; };
 		662263B52230CC5C0087FAC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		663231A2221D13120057F45B /* UiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiView.swift; sourceTree = "<group>"; };
 		6662B70D22431507007CD9BE /* SectionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsCell.swift; sourceTree = "<group>"; };
@@ -88,15 +86,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6614A0D7226A2F1D00FC8ED1 /* Font */ = {
-			isa = PBXGroup;
-			children = (
-				6614A0D9226A2F2900FC8ED1 /* ROCK.TTF */,
-				6614A0D8226A2F2900FC8ED1 /* rockb.ttf */,
-			);
-			path = Font;
-			sourceTree = "<group>";
-		};
 		6671A069221CB86E007C20F2 = {
 			isa = PBXGroup;
 			children = (
@@ -125,7 +114,6 @@
 				6671A079221CB86F007C20F2 /* Main.storyboard */,
 				6662B70F22431E3C007CD9BE /* Section.swift */,
 				6662B70D22431507007CD9BE /* SectionsCell.swift */,
-				6614A0D7226A2F1D00FC8ED1 /* Font */,
 				66C2FA2F224062050052004C /* View Controllers */,
 				662263B52230CC5C0087FAC0 /* Assets.xcassets */,
 				6671A07E221CB870007C20F2 /* LaunchScreen.storyboard */,

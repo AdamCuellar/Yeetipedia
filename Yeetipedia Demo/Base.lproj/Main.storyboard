@@ -61,8 +61,8 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yeetipedia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soI-PT-0bD">
-                                <rect key="frame" x="16" y="250.5" width="382" height="60"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
+                                <rect key="frame" x="16" y="260.5" width="382" height="50"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="50"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -138,8 +138,8 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Become a Yeeter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueN-Gd-NVh">
-                                <rect key="frame" x="16" y="245.5" width="382" height="41"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="34"/>
+                                <rect key="frame" x="16" y="244.5" width="382" height="42"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="42"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EnO-v8-Gbp">
@@ -154,7 +154,6 @@
                                 </state>
                                 <connections>
                                     <action selector="signUp:" destination="Ct1-ER-fhD" eventType="touchUpInside" id="nja-92-EZI"/>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="back_to_login" id="TKY-Ub-3c4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eeg-52-H4H">
@@ -200,6 +199,7 @@
                         <outlet property="password" destination="irM-pY-ta4" id="Awi-N9-Skt"/>
                         <outlet property="username" destination="bL5-y0-B8q" id="lmg-DT-yrf"/>
                         <segue destination="M3A-PT-e6C" kind="presentation" identifier="sign_up_to_toc" id="nmP-SG-sZs"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="back_to_login" id="onQ-UH-A4u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lG8-Te-zzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -346,6 +346,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="nmP-SG-sZs"/>
-        <segue reference="TKY-Ub-3c4"/>
+        <segue reference="onQ-UH-A4u"/>
     </inferredMetricsTieBreakers>
 </document>
