@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6614A0DA226A2FD100FC8ED1 /* ROCK.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 6614A0D9226A2F2900FC8ED1 /* ROCK.TTF */; };
+		6614A0DB226A2FD600FC8ED1 /* rockb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6614A0D8226A2F2900FC8ED1 /* rockb.ttf */; };
 		662263B62230CC5C0087FAC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 662263B52230CC5C0087FAC0 /* Assets.xcassets */; };
 		662263B72230CFF00087FAC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6671A07E221CB870007C20F2 /* LaunchScreen.storyboard */; };
 		663231A3221D13120057F45B /* UiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663231A2221D13120057F45B /* UiView.swift */; };
@@ -271,7 +273,9 @@
 			files = (
 				662263B62230CC5C0087FAC0 /* Assets.xcassets in Resources */,
 				6671A07B221CB86F007C20F2 /* Main.storyboard in Resources */,
+				6614A0DB226A2FD600FC8ED1 /* rockb.ttf in Resources */,
 				662263B72230CFF00087FAC0 /* LaunchScreen.storyboard in Resources */,
+				6614A0DA226A2FD100FC8ED1 /* ROCK.TTF in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
