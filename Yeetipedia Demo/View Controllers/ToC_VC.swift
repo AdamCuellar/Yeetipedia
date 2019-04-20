@@ -1,106 +1,102 @@
 //
-//  TestingTable.swift
+//  ToC_VC.swift
 //  Yeetipedia Demo
 //
-//  Created by Boyce Estes on 3/31/19.
+//  Created by Boyce Estes on 4/20/19.
 //  Copyright © 2019 Adam T. Cuellar. All rights reserved.
 //
 
 import UIKit
 
-//struct CellInfo {
-//    let id: Int
-//    let title: String
-//    let description: String
-//}
-
-class CustomTocCell: UITableViewCell {
-    @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var author: UILabel!
+struct CellInfo {
+    let id: Int
+    let title: String
+    let description: String
 }
 
-class TestingTable: UITableViewController {
+class Toc_cell: UITableViewCell {
+    
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var desc: UILabel!
+}
 
-    // information for the table of contents page
+class ToC_VC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var tableView: UITableView!
+    
     var cellInfoArray = [CellInfo]()
     var searchResults = [CellInfo]()
     
-    var searchBar : UISearchBar = UISearchBar()
     var searching : Bool = false
     
-    // information for the page that is clicked on in the table of contents
+    // store the dictionary page chosen
     var pageInfo = [[String:Any]]()
+    // pass the title of the chosen page to the
     var cellTitle = String()
+    // prevents the cell from being pressed twice while info is loading in
     var clicked = Bool()
     
-    
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let headerView: UIView = UIView.init(frame: CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: 100, height: 100)))
-        headerView.backgroundColor = UIColor(red: 255.0/255.0, green: 15.0/255.0, blue: 15.0/255.0, alpha: 1.0)
+        // required to implement UITableViewDataSource and UITableViewDelegate
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
         
-//        let searchBar: UISearchBar = UISearchBar.init(frame: CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: self.view.screendWidth, height: 100)))
-        searchBar.searchBarStyle = UISearchBar.Style.prominent
-        searchBar.placeholder = " Search..."
-        searchBar.sizeToFit()
-        searchBar.isTranslucent = false
-        searchBar.backgroundImage = UIImage()
-        searchBar.delegate = self
-        //navigationItem.titleView = searchBar
-        // labelView.text = "hello"
+        // required to implement UISearchBarDelegate
+        self.searchBar.delegate = self
         
-        headerView.addSubview(searchBar)
-        self.tableView.tableHeaderView = headerView
-
-        
-        // this is used to set the dynamic height and remove the lines between rows
+        // set height for table of contents to be dynamic
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 50
-        //tableView.rowHeight = 100
-        // tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-        tableView.tableFooterView = UIView()
-        tableView.reloadData()
-        // add button
+        tableView.estimatedRowHeight = 96
+        
+        // add a header for the table displaying the title of this page
+        
+        
+        // logout button
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: UIBarButtonItem.Style.plain, target: self, action: #selector(TestingTable.logoutTapped(_:)))
-    }
-
-    
-    @objc func logoutTapped(_ sender:UIBarButtonItem!) {
-        print("logout tapped")
-        DispatchQueue.main.async {
-                // self.performSegue(withIdentifier: "go_to_table_of_contents", sender: nil)
-                self.performSegue(withIdentifier:"go_to_login", sender:nil)
-        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
         clicked = false
     }
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    
+    // table setup functions
+    
+  
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cellInfoArray.count
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if (searching) {
+            return searchResults.count
+        } else {
+            return cellInfoArray.count
+        }
     }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TocIdentifier", for: indexPath) as! CustomTocCell
-        print("\(indexPath.row)) hello there world")
-        let cellInfo = cellInfoArray[indexPath.row]
-        
-        cell.title.text = cellInfo.title
-        cell.author.text = cellInfo.description
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "toc_cell", for: indexPath) as! Toc_cell
+        var cellInfo : CellInfo
+        if (searching) {
+            // called whenever we are entering text into the search bar
+            cellInfo = searchResults[indexPath.row]
+            
+        } else {
+            // called whenever we are not entering text in the search bar
+            cellInfo = cellInfoArray[indexPath.row]
+        }
+        cell.title.text = cellInfo.title
+        cell.desc.text = cellInfo.description
         return cell
     }
- 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (clicked == false) {
             clicked = true;
             // get the page ID of the selected row
@@ -116,11 +112,22 @@ class TestingTable: UITableViewController {
                 DispatchQueue.main.async
                     {
                         // self.performSegue(withIdentifier: "go_to_table_of_contents", sender: nil)
-                        self.performSegue(withIdentifier:"push_specific_page", sender:nil)
+                        self.performSegue(withIdentifier:"toc_to_page", sender:nil)
                 }
             }
         }
     }
+    
+    // logout
+    @objc func logoutTapped(_ sender:UIBarButtonItem!) {
+        print("logout tapped")
+        DispatchQueue.main.async {
+            // self.performSegue(withIdentifier: "go_to_table_of_contents", sender: nil)
+            self.performSegue(withIdentifier:"toc_to_login", sender:nil)
+        }
+    }
+    
+    // get get clicked page data
     
     func specific_page_request(dict: [String:Any] , title: String, completion: @escaping ([String: Any]?, Error?) -> Void)
     {
@@ -169,7 +176,7 @@ class TestingTable: UITableViewController {
                 
                 // parses out the json to the arrays inside of the "pages" index
                 print("PRINTING JSON \(json)")
-
+                
                 let sections = json["sections"] as? [[String:Any]]
                 print("print 2d array: \(String(describing: sections))")
                 // print(json)
@@ -191,26 +198,36 @@ class TestingTable: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "push_specific_page" {
-            print("HELLO2")
+        if segue.identifier == "toc_to_page" {
+            
             if let nextVC = segue.destination as? TableViewController {
                 nextVC.pageInfo = pageInfo
                 nextVC.cellTitle = cellTitle
             }
         }
     }
+    
+    func printSearchResults () {
+        print("print searchResults")
+        for i in 0 ..< searchResults.count {
+            print("\(i))\(searchResults[i].title)")
+        }
+    }
 }
 
-extension TestingTable : UISearchBarDelegate {
-    private func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchResults = cellInfoArray.filter({$0.title.prefix(searchText.count) == searchText})
+extension ToC_VC : UISearchBarDelegate {
+    // search bar delegate setup
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("hello world: \(searchText)")
+        searchResults = cellInfoArray.filter({$0.title.lowercased().prefix(searchText.count) == searchText.lowercased()})
+        printSearchResults()
         searching = true
-        tableView.reloadData()
+        self.tableView.reloadData()
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searching = false
         searchBar.text = ""
-        tableView.reloadData()
+        searching = false
+        self.tableView.reloadData()
     }
 }

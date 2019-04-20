@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     // go to sign up segue
     @IBAction func goToSignUp(_ sender: Any)
     {
-        self.performSegue(withIdentifier:"goToSignUp", sender:nil)
+        self.performSegue(withIdentifier:"login_to_signup", sender:nil)
     }
     
     // attempt log in
@@ -59,7 +59,8 @@ class ViewController: UIViewController {
                             DispatchQueue.main.async
                             {
                                    // self.performSegue(withIdentifier: "go_to_table_of_contents", sender: nil)
-                                self.performSegue(withIdentifier:"go_to_toc", sender:nil)
+                                self.performSegue(withIdentifier:"login_to_toc", sender:nil)
+//                                self.performSegue(withIdentifier: "login_to_testingTable", sender: nil)
                             }
                         } else if let error = error {
                             print("error: \(error.localizedDescription)")
@@ -188,7 +189,7 @@ class ViewController: UIViewController {
                 // parses out the json to the arrays inside of the "pages" index
                 let pages = json["pages"] as? [[String:Any]]
                 print("PRINTING JSON \(json)")
-                print("pages:\n \(String(describing: pages))")
+                //print("pages:\n \(String(describing: pages))")
                 
                 DispatchQueue.main.async {
                     self.table_of_contents_info = pages!
@@ -208,10 +209,17 @@ class ViewController: UIViewController {
     // Get the new view controller using segue.destination.
     // Pass the selected object to the new view controller.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "go_to_toc" {
+        if segue.identifier == "login_to_toc" {
+            if let navigationVC = segue.destination as? UINavigationController, let myViewController = navigationVC.topViewController as? ToC_VC {
+                myViewController.cellInfoArray = createCellInfoArray()
+            }
+            
+        }
+        if segue.identifier == "login_to_testingTable" {
             if let navigationVC = segue.destination as? UINavigationController, let myViewController = navigationVC.topViewController as? TestingTable {
                 myViewController.cellInfoArray = createCellInfoArray()
             }
+            
         }
     }
     

@@ -48,7 +48,7 @@ class SignUpVC: UIViewController {
                         {
                             DispatchQueue.main.async
                                 {
-                                    self.performSegue(withIdentifier:"sign_up_to_toc", sender:nil)
+                                    self.performSegue(withIdentifier:"signup_to_toc", sender:nil)
                             }
                         } else if let error = error {
                             print("error: \(error.localizedDescription)")
@@ -67,7 +67,7 @@ class SignUpVC: UIViewController {
     @IBAction func clicked_go_to_login(_ sender: Any) {
         DispatchQueue.main.async
         {
-                self.performSegue(withIdentifier: "back_to_login", sender: nil)
+                self.performSegue(withIdentifier: "signup_to_login", sender: nil)
         }
     }
     
@@ -199,8 +199,8 @@ class SignUpVC: UIViewController {
     // Get the new view controller using segue.destination.
     // Pass the selected object to the new view controller.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "sign_up_to_toc" {
-            if let navigationVC = segue.destination as? UINavigationController, let myViewController = navigationVC.topViewController as? TestingTable {
+        if segue.identifier == "signup_to_toc" {
+            if let navigationVC = segue.destination as? UINavigationController, let myViewController = navigationVC.topViewController as? ToC_VC {
                 myViewController.cellInfoArray = createCellInfoArray()
             }
         }

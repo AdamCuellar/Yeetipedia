@@ -13,12 +13,13 @@
 		6662B70E22431507007CD9BE /* SectionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6662B70D22431507007CD9BE /* SectionsCell.swift */; };
 		6662B71022431E3C007CD9BE /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6662B70F22431E3C007CD9BE /* Section.swift */; };
 		6671A076221CB86F007C20F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6671A075221CB86F007C20F2 /* AppDelegate.swift */; };
-		6671A078221CB86F007C20F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6671A077221CB86F007C20F2 /* ViewController.swift */; };
+		6671A078221CB86F007C20F2 /* Login_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6671A077221CB86F007C20F2 /* Login_VC.swift */; };
 		6671A07B221CB86F007C20F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6671A079221CB86F007C20F2 /* Main.storyboard */; };
 		6671A08B221CB871007C20F2 /* Yeetipedia_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6671A08A221CB871007C20F2 /* Yeetipedia_DemoTests.swift */; };
 		6671A096221CB871007C20F2 /* Yeetipedia_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6671A095221CB871007C20F2 /* Yeetipedia_DemoUITests.swift */; };
-		66A9D227224002C800A28D49 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A9D226224002C800A28D49 /* TableViewController.swift */; };
-		66F0A45C22693D250015A0CC /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F0A45B22693D250015A0CC /* SignUpVC.swift */; };
+		66A9D227224002C800A28D49 /* Page_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A9D226224002C800A28D49 /* Page_VC.swift */; };
+		66F0A45C22693D250015A0CC /* Signup_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F0A45B22693D250015A0CC /* Signup_VC.swift */; };
+		B39286DE226AD6DB00F24F6D /* ToC_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39286DD226AD6DB00F24F6D /* ToC_VC.swift */; };
 		B3DB9F3522510B4000CE2884 /* TestingTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB9F3422510B4000CE2884 /* TestingTable.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +47,7 @@
 		6662B70F22431E3C007CD9BE /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		6671A072221CB86F007C20F2 /* Yeetipedia Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yeetipedia Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6671A075221CB86F007C20F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6671A077221CB86F007C20F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6671A077221CB86F007C20F2 /* Login_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_VC.swift; sourceTree = "<group>"; };
 		6671A07A221CB86F007C20F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6671A07F221CB870007C20F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6671A081221CB870007C20F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,8 +57,9 @@
 		6671A091221CB871007C20F2 /* Yeetipedia DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Yeetipedia DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6671A095221CB871007C20F2 /* Yeetipedia_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yeetipedia_DemoUITests.swift; sourceTree = "<group>"; };
 		6671A097221CB871007C20F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		66A9D226224002C800A28D49 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		66F0A45B22693D250015A0CC /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		66A9D226224002C800A28D49 /* Page_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page_VC.swift; sourceTree = "<group>"; };
+		66F0A45B22693D250015A0CC /* Signup_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup_VC.swift; sourceTree = "<group>"; };
+		B39286DD226AD6DB00F24F6D /* ToC_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToC_VC.swift; sourceTree = "<group>"; };
 		B3DB9F3422510B4000CE2884 /* TestingTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,10 +145,11 @@
 		66C2FA2F224062050052004C /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				66F0A45B22693D250015A0CC /* SignUpVC.swift */,
-				6671A077221CB86F007C20F2 /* ViewController.swift */,
+				66F0A45B22693D250015A0CC /* Signup_VC.swift */,
+				6671A077221CB86F007C20F2 /* Login_VC.swift */,
 				B3DB9F3422510B4000CE2884 /* TestingTable.swift */,
-				66A9D226224002C800A28D49 /* TableViewController.swift */,
+				B39286DD226AD6DB00F24F6D /* ToC_VC.swift */,
+				66A9D226224002C800A28D49 /* Page_VC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -331,11 +334,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66F0A45C22693D250015A0CC /* SignUpVC.swift in Sources */,
+				66F0A45C22693D250015A0CC /* Signup_VC.swift in Sources */,
 				6662B70E22431507007CD9BE /* SectionsCell.swift in Sources */,
+				B39286DE226AD6DB00F24F6D /* ToC_VC.swift in Sources */,
 				663231A3221D13120057F45B /* UiView.swift in Sources */,
-				66A9D227224002C800A28D49 /* TableViewController.swift in Sources */,
-				6671A078221CB86F007C20F2 /* ViewController.swift in Sources */,
+				66A9D227224002C800A28D49 /* Page_VC.swift in Sources */,
+				6671A078221CB86F007C20F2 /* Login_VC.swift in Sources */,
 				B3DB9F3522510B4000CE2884 /* TestingTable.swift in Sources */,
 				6662B71022431E3C007CD9BE /* Section.swift in Sources */,
 				6671A076221CB86F007C20F2 /* AppDelegate.swift in Sources */,
