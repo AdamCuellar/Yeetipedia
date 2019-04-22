@@ -176,17 +176,33 @@ class ToC_VC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 
                 // parses out the json to the arrays inside of the "pages" index
                 print("PRINTING JSON \(json)")
-                
-                let sections = json["sections"] as? [[String:Any]]
-                print("print 2d array: \(String(describing: sections))")
-                // print(json)
-                
-                DispatchQueue.main.async {
-                    self.pageInfo = sections!
-                    self.cellTitle = title
+                let results = json["state"] as? Int
+                if (results == 0) {
+                    
+                    let alertController = UIAlertController(title: "Cannot Access", message: "You do not have permission to view this page.", preferredStyle: .alert)
+                    
+                    let action1 = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+                        print("pressed OK");
+                    }
+                    
+                    let action2 = UIAlertAction(title: "OK but in another button", style: .cancel) { (action:UIAlertAction) in
+                        print("You've pressed cancel");
+                    }
+                    
+                    alertController.addAction(action1)
+                    alertController.addAction(action2)
+                    self.present(alertController, animated: true, completion: nil)
+                } else {
+                    let sections = json["sections"] as? [[String:Any]]
+                    print("print 2d array: \(String(describing: sections))")
+                    // print(json)
+                    
+                    DispatchQueue.main.async {
+                        self.pageInfo = sections!
+                        self.cellTitle = title
+                    }
+                    completion(json, nil)
                 }
-                
-                completion(json, nil)
             } catch let error {
                 print("error in table of contents request")
                 print(error.localizedDescription)

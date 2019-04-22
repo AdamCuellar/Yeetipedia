@@ -187,8 +187,11 @@ class ViewController: UIViewController {
                 }
                 
                 // parses out the json to the arrays inside of the "pages" index
+                
+                
                 let pages = json["pages"] as? [[String:Any]]
                 print("PRINTING JSON \(json)")
+                
                 //print("pages:\n \(String(describing: pages))")
                 
                 DispatchQueue.main.async {
@@ -213,7 +216,6 @@ class ViewController: UIViewController {
             if let navigationVC = segue.destination as? UINavigationController, let myViewController = navigationVC.topViewController as? ToC_VC {
                 myViewController.cellInfoArray = createCellInfoArray()
             }
-            
         }
         if segue.identifier == "login_to_testingTable" {
             if let navigationVC = segue.destination as? UINavigationController, let myViewController = navigationVC.topViewController as? TestingTable {
