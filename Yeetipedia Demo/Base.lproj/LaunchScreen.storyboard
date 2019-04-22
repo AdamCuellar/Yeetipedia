@@ -19,8 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yeetipedia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAK-Wt-XIn">
-                                <rect key="frame" x="48" y="300.5" width="279" height="66"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="55"/>
+                                <rect key="frame" x="49" y="303.5" width="277" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="HBQ-Wq-BeK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="50"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
