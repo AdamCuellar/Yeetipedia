@@ -13,6 +13,7 @@ class SectionsCell: UITableViewCell {
     @IBOutlet weak var content: UILabel!
     @IBOutlet weak var title: UILabel!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -34,7 +35,11 @@ class SectionsCell: UITableViewCell {
     
     func updateUI()
     {
-        content?.text = section?.info["content"] as? String
+        
+        // fix <br> issue
+        var str = section?.info["content"] as! String
+        str = str.replacingOccurrences(of: "<br>", with: "\n")
+        content?.text = str
         title?.text = section?.info["heading"] as? String
         
         print(section?.info["content"] ?? "no")
