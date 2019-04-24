@@ -36,10 +36,15 @@ class SectionsCell: UITableViewCell {
     func updateUI()
     {
         
-        // fix <br> issue
-        var str = section?.info["content"] as! String
-        str = str.replacingOccurrences(of: "<br>", with: "\n")
-        content?.text = str
+        // remove HTML
+//        var str = section?.info["content"] as! String
+//        str = str.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression)
+//        str = str.replacingOccurrences(of: "\\s{2,}", with: " ", options: .regularExpression)
+        let htmlString = section?.info["content"] as! String
+        let attributed = try! NSAttributedString(data: htmlString.data(using: .unicode)!, options: [.documentType : NSAttributedString.DocumentType.html], documentAttributes: nil)
+
+
+        content?.text = attributed.string
         title?.text = section?.info["heading"] as? String
         
         print(section?.info["content"] ?? "no")

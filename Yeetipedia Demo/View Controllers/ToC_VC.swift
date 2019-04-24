@@ -93,6 +93,7 @@ class ToC_VC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
         cell.title.text = cellInfo.title
         cell.desc.text = cellInfo.description
+        cell.selectionStyle = .blue
         return cell
     }
     
@@ -110,11 +111,13 @@ class ToC_VC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             specific_page_request(dict: pageSelect, title: cellTitle) { (dict, error) in
                 print("hello world")
                 DispatchQueue.main.async
-                    {
+                {
                         // self.performSegue(withIdentifier: "go_to_table_of_contents", sender: nil)
                         self.performSegue(withIdentifier:"toc_to_page", sender:nil)
                 }
             }
+            
+            tableView.deselectRow(at: indexPath, animated: true)
         }
     }
     
