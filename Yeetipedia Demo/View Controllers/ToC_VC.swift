@@ -56,6 +56,8 @@ class ToC_VC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         // logout button
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: UIBarButtonItem.Style.plain, target: self, action: #selector(TestingTable.logoutTapped(_:)))
+        
+        setupKeyboardDismissRecognizer()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -215,6 +217,20 @@ class ToC_VC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         for i in 0 ..< searchResults.count {
             print("\(i))\(searchResults[i].title)")
         }
+    }
+    
+    func setupKeyboardDismissRecognizer(){
+        let tapRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(self.dismissKeyboard))
+        
+        tapRecognizer.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tapRecognizer)
+    }
+    
+    @objc func dismissKeyboard()
+    {
+        view.endEditing(true)
     }
 }
 
