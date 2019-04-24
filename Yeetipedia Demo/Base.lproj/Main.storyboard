@@ -320,7 +320,7 @@
             </objects>
             <point key="canvasLocation" x="1074" y="-52"/>
         </scene>
-        <!--Yeetipidia-->
+        <!--Yeetipedia-->
         <scene sceneID="L8L-pm-4vQ">
             <objects>
                 <viewController id="E04-nW-gge" customClass="ToC_VC" customModule="Yeetipedia_Demo" customModuleProvider="target" sceneMemberID="viewController">
@@ -344,7 +344,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Robotics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaQ-ef-ayN">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lunar Knights" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaQ-ef-ayN">
                                             <rect key="frame" x="16" y="16" width="382" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="k3t-KZ-Qf5"/>
@@ -419,7 +419,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UFb-vu-cz6"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Yeetipidia" id="Ti6-Om-XeG"/>
+                    <navigationItem key="navigationItem" title="Yeetipedia" id="Ti6-Om-XeG"/>
                     <connections>
                         <outlet property="searchBar" destination="wzx-EP-t4D" id="cFH-vf-d4B"/>
                         <outlet property="tableView" destination="Ahd-uc-KDX" id="U7m-05-viI"/>

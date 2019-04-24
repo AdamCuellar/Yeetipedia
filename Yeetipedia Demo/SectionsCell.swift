@@ -13,6 +13,7 @@ class SectionsCell: UITableViewCell {
     @IBOutlet weak var content: UILabel!
     @IBOutlet weak var title: UILabel!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -34,7 +35,16 @@ class SectionsCell: UITableViewCell {
     
     func updateUI()
     {
-        content?.text = section?.info["content"] as? String
+        
+        // remove HTML
+//        var str = section?.info["content"] as! String
+//        str = str.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression)
+//        str = str.replacingOccurrences(of: "\\s{2,}", with: " ", options: .regularExpression)
+        let htmlString = section?.info["content"] as! String
+        let attributed = try! NSAttributedString(data: htmlString.data(using: .unicode)!, options: [.documentType : NSAttributedString.DocumentType.html], documentAttributes: nil)
+
+
+        content?.text = attributed.string
         title?.text = section?.info["heading"] as? String
         
         print(section?.info["content"] ?? "no")

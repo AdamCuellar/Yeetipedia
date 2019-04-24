@@ -25,7 +25,7 @@ class SignUpVC: UIViewController {
         password.layer.borderColor = fieldColor.cgColor
         confirmPass.layer.borderColor = fieldColor.cgColor
         
-        // 
+        setupKeyboardDismissRecognizer()
         
     }
     
@@ -47,19 +47,56 @@ class SignUpVC: UIViewController {
                         if result != nil
                         {
                             DispatchQueue.main.async
-                                {
-                                    self.performSegue(withIdentifier:"signup_to_toc", sender:nil)
+                            {
+                                self.performSegue(withIdentifier:"signup_to_toc", sender:nil)
                             }
                         } else if let error = error {
                             print("error: \(error.localizedDescription)")
                         }
                     }
                 }
+                else if result?["state"] as! Int == 2
+                {
+                    DispatchQueue.main.async
+                    {
+                        let alert = UIAlertController(title: "Error", message: "The passwords you've entered do not match.", preferredStyle: .alert)
+                        
+                        alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: nil))
+                        
+                        self.present(alert, animated: true)
+                    }
+                }
+                else if result?["state"] as! Int == 0
+                {
+                    DispatchQueue.main.async
+                    {
+                        let alert = UIAlertController(title: "Error", message: "Username has been taken. Please try a more unique username.", preferredStyle: .alert)
+                        
+                        alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: nil))
+                        
+                        self.present(alert, animated: true)
+                    }
+                }
+                else
+                {
+                    DispatchQueue.main.async
+                    {
+                        let alert = UIAlertController(title: "Error", message: "There was an error signing up.", preferredStyle: .alert)
+                        
+                        alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: nil))
+                        
+                        self.present(alert, animated: true)
+                    }
+                }
             }
         }
         else
         {
-            print("didn't try to sign up");
+            let alert = UIAlertController(title: "Error", message: "Please fill each field.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
         }
     }
     
@@ -220,4 +257,17 @@ class SignUpVC: UIViewController {
         return cellInfoArray
     }
 
+    func setupKeyboardDismissRecognizer(){
+        let tapRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(self.dismissKeyboard))
+        
+        tapRecognizer.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tapRecognizer)
+    }
+    
+    @objc func dismissKeyboard()
+    {
+        view.endEditing(true)
+    }
 }

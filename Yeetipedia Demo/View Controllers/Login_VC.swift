@@ -29,6 +29,8 @@ class ViewController: UIViewController {
         login_button.layer.cornerRadius = 5; // this value vary as per your desire
         login_button.clipsToBounds = true
         
+        setupKeyboardDismissRecognizer()
+        
     }
     
     // go to sign up segue
@@ -49,31 +51,62 @@ class ViewController: UIViewController {
             
             // call postRequest with username and password parameters
             postRequest(username: user, password: pass) { (result, error) in
-                if let result = result {
-                    print("Success: \(result)")
-                    
+                if result?["state"] as! Int == 1
+                {
                     // request content
                     self.table_of_contents_request() { (result, error) in
                         if result != nil
                         {
                             DispatchQueue.main.async
                             {
-                                   // self.performSegue(withIdentifier: "go_to_table_of_contents", sender: nil)
                                 self.performSegue(withIdentifier:"login_to_toc", sender:nil)
-//                                self.performSegue(withIdentifier: "login_to_testingTable", sender: nil)
                             }
                         } else if let error = error {
                             print("error: \(error.localizedDescription)")
                         }
                     }
-                } else if let error = error {
-                    print("error: \(error.localizedDescription)")
+                }
+                else if result?["state"] as! Int == 2
+                {
+                    DispatchQueue.main.async
+                    {
+                        let alert = UIAlertController(title: "Error", message: "The password you've entered does not match.", preferredStyle: .alert)
+                        
+                        alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: nil))
+                        self.present(alert, animated: true)
+                    }
+                }
+                else if result?["state"] as! Int == 0
+                {
+                    DispatchQueue.main.async
+                    {
+                        let alert = UIAlertController(title: "Error", message: "The username does not exist.", preferredStyle: .alert)
+                        
+                        alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: nil))
+                        
+                        self.present(alert, animated: true)
+                    }
+                }
+                else
+                {
+                    DispatchQueue.main.async
+                    {
+                        let alert = UIAlertController(title: "Error", message: "There was an issue Yeeting in.", preferredStyle: .alert)
+                        
+                        alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: nil))
+                        
+                        self.present(alert, animated: true)
+                    }
                 }
             }
         }
         else
         {
-            print("Error");
+            let alert = UIAlertController(title: "Error", message: "Please enter a username and password.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
         }
 
     }
@@ -88,7 +121,7 @@ class ViewController: UIViewController {
         let parameters = ["username": username, "password": password]
         
         //create the url with NSURL
-        let url = URL(string: "https://www.yeetdog.com/ContactProject/login.php")!
+        let url = URL(string: "https://www.yeetdog.com/Yeetipedia/login.php")!
         
         //create the session object
         let session = URLSession.shared
@@ -238,6 +271,21 @@ class ViewController: UIViewController {
         
         return cellInfoArray
     }
+    
+    func setupKeyboardDismissRecognizer(){
+        let tapRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(self.dismissKeyboard))
+        
+        tapRecognizer.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tapRecognizer)
+    }
+    
+    @objc func dismissKeyboard()
+    {
+        view.endEditing(true)
+    }
+    
 }
 /*
  ["pages": <__NSArrayM 0x6000034d0b70>(
